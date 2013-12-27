@@ -14,7 +14,7 @@ Some customizations built upon [Bash It](https://github.com/revans/bash-it).
 The following will walk through Bash It installation, and customizations.
 
 ``` bash
-git clone https://github.com/RobLoach/dotfiles.git ~/.dotfiles && mv -f ~/.dotfiles/* ~/.dotfiles/.[^.]* ~ && rm -rf ~/.dotfiles && make install -C ~
+git clone https://github.com/RobLoach/dotfiles.git ~/.dotfiles && mv -f ~/.dotfiles/Makefile ~/.dotfiles/.git ~ && rm -rf ~/.dotfiles && make install -C ~
 ```
 
 

@@ -1,12 +1,15 @@
+###
+# Dotfiles
+###
 default:
-	@echo "Retrieving latest dot file updates..."
-	@git reset --hard HEAD
+	@echo "Updating Dotfiles..."
 	@git pull
 
 uninstall:
+	@echo "Uninstalling Dotfiles..."
 	@rm -rf ~/.bash_it ~/.git Makefile README.md
 
-install: default
+install:
 	@echo "Installing Bash-It..."
 	@rm -rf ~/.bash_it
 	@git clone https://github.com/revans/bash-it.git ~/.bash_it
