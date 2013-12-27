@@ -1,0 +1,5 @@
+[user]
+	email = robloach@gmail.com
+	name = Rob Loach
+[core]
+	excludesfile = ~/.gitignore_global
