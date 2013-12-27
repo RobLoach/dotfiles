@@ -1,12 +1,12 @@
 # Ignore all.
 *
 
-# Except the following files.
+# Except the desired dotfiles.
 !.gitignore
 !.gitignore_global
 !.gitconfig
 !README.md
-!LICENSE.md
 !.bashrc
 !.bash_profile
 !Makefile
+!.config/sublime-text-2/Packages/Default/Preferences.sublime-settings
