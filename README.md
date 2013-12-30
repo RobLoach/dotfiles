@@ -1,62 +1,36 @@
 # Rob's Dotfiles
 
-Some customizations built upon [Bash It](https://github.com/revans/bash-it).
+Based on [Bash It](https://github.com/revans/bash-it).
 
 
 ## Dependencies
 
-* [git](http://git-scm.com/)
-* [make](https://www.gnu.org/software/make/)
+* [git](http://git-scm.com)
+* [php](http://php.net)
 
 
 ## Installation
 
-The following will walk through Bash It installation, and customizations.
-
+1. Check out the repository into something like `~/.dotfiles`:
 ``` bash
-git clone git@github.com:RobLoach/dotfiles.git ~/.dotfiles && mv -f ~/.dotfiles/Makefile ~/.dotfiles/.git ~ && rm -rf ~/.dotfiles && make install -C ~
+git clone git@github.com:RobLoach/dotfiles.git ~/.dotfiles
 ```
 
-
-## Usage
-
-See available aliases and options:
+2. Update the *git submodules* to retrieve any third-party dependencies:
 ``` bash
-bash-it
+cd ~/.dotfiles
+git submodule init
+git submodule update
 ```
 
-Update the available dot files:
+3. Run `install.php` to symlink all the dotfiles accordingly:
 ``` bash
-make -C ~
-```
-
-Uninstalling will remove Bash It, documentation and git integration:
-``` bash
-make uninstall -C ~
+php ~/.dotfiles/install.php
 ```
 
 
 ## License
 
-Dotfiles is released under the MIT License:
+Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT license](http://creativecommons.org/licenses/MIT/)
 
-> Copyright (C) 2013 [Rob Loach](http://robloach.net)
->
-> Permission is hereby granted, free of charge, to any person obtaining
-> a copy of this software and associated documentation files (the
-> "Software"), to deal in the Software without restriction, including
-> without limitation the rights to use, copy, modify, merge, publish,
-> distribute, sublicense, and/or sell copies of the Software, and to
-> permit persons to whom the Software is furnished to do so, subject to
-> the following conditions:
->
-> The above copyright notice and this permission notice shall be
-> included in all copies or substantial portions of the Software.
->
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-> EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-> MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-> NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-> LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-> OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-> WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Copyright &copy; Rob Loach (http://robloach.net)

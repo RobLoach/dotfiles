@@ -1,0 +1,9 @@
+[submodule "bash_it"]
+	path = bash_it
+	url = git@github.com:RobLoach/bash-it.git
+[submodule "config/sublime-text-2/Packages/CoffeeScript"]
+	path = config/sublime-text-2/Packages/CoffeeScript
+	url = https://github.com/Xavura/CoffeeScript-Sublime-Plugin.git
+[submodule "config/sublime-text-2/Packages/GitGutter"]
+	path = config/sublime-text-2/Packages/GitGutter
+	url = https://github.com/jisaacks/GitGutter.git
