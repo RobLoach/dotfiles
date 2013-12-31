@@ -13,5 +13,10 @@ export GIT_HOSTING='git@github.com'
 # Don't check mail when opening terminal.
 unset MAILCHECK
 
+# Custom aliases
+
+# Drush: https://github.com/drush-ops/drush
+alias drush="php ~/.drush/drush.php"
+
 # Load Bash It, if it's installed.
 [[ -s $BASH_IT/bash_it.sh ]] && source $BASH_IT/bash_it.sh
