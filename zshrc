@@ -48,7 +48,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # Custom aliases
-source ~/.dotfiles.aliases.sh
+source ~/.dotfiles.aliases
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh

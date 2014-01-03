@@ -1,0 +1,5 @@
+# Load environmental aliases: .dotfiles.aliases-environmental.template
+[[ -s ~/.dotfiles.aliases-environmental ]] && source ~/.dotfiles.aliases-environmental
+
+# Drush: https://github.com/drush-ops/drush
+alias drush="php ~/.drush/drush.php"

@@ -14,7 +14,7 @@ export GIT_HOSTING='git@github.com'
 unset MAILCHECK
 
 # Custom aliases
-source ~/.dotfiles.aliases.sh
+source ~/.dotfiles.aliases
 
 # Load Bash It, if it's installed.
 [[ -s $BASH_IT/bash_it.sh ]] && source $BASH_IT/bash_it.sh
