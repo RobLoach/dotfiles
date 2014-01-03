@@ -14,9 +14,7 @@ export GIT_HOSTING='git@github.com'
 unset MAILCHECK
 
 # Custom aliases
-
-# Drush: https://github.com/drush-ops/drush
-alias drush="php ~/.drush/drush.php"
+source ~/.dotfiles.aliases.sh
 
 # Load Bash It, if it's installed.
 [[ -s $BASH_IT/bash_it.sh ]] && source $BASH_IT/bash_it.sh

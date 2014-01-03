@@ -1,6 +1,6 @@
 # Rob's Dotfiles
 
-Based on [Bash It](https://github.com/revans/bash-it).
+[Bash-It](https://github.com/revans/bash-it) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/) usage.
 
 
 ## Dependencies
