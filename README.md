@@ -1,12 +1,20 @@
 # Rob's Dotfiles
 
-[Bash-It](https://github.com/revans/bash-it) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/) usage.
+[Bash-It](https://github.com/revans/bash-it) or [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/) usage.
 
 
 ## Dependencies
 
 * [git](http://git-scm.com)
 * [php](http://php.net)
+
+
+## Features
+
+* [Bash-It](https://github.com/revans/bash-it) if on [bash](https://www.gnu.org/software/bash/)
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/) if on [zsh](http://www.zsh.org/)
+* Custom Environmental Aliases
+  * `cp ~/.dotfiles/.dotfiles.aliases-env ~/.dotfiles.aliases-env`
 
 
 ## Installation
