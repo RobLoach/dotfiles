@@ -10,6 +10,6 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "composer"]
-	path = composer
-	url = https://github.com/composer/composer.git
+[submodule "bash_it"]
+	path = bash_it
+	url = https://github.com/RobLoach/bash-it.git
