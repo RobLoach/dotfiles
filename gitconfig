@@ -1,5 +1,13 @@
 [user]
 	email = robloach@gmail.com
 	name = Rob Loach
+
 [core]
 	excludesfile = ~/.gitignore_global
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+    interactive = auto
