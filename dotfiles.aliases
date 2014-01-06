@@ -2,4 +2,4 @@
 [[ -s ~/.dotfiles.aliases-env ]] && source ~/.dotfiles.aliases-env
 
 # Drush: https://github.com/drush-ops/drush
-alias drush="php ~/.drush/drush.php"
+alias drush="php -d memory_limit=1024M ~/.drush/drush.php"
