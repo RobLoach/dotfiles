@@ -13,3 +13,9 @@
 [submodule "bash_it"]
 	path = bash_it
 	url = https://github.com/RobLoach/bash-it.git
+[submodule "config/sublime-text-2/Packages/Package Control"]
+	path = config/sublime-text-2/Packages/Package Control
+	url = https://github.com/wbond/sublime_package_control.git
+[submodule "config/sublime-text-2/Packages/EditorConfig"]
+	path = config/sublime-text-2/Packages/EditorConfig
+	url = https://github.com/sindresorhus/editorconfig-sublime.git
