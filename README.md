@@ -27,8 +27,7 @@ git clone git@github.com:RobLoach/dotfiles.git ~/.dotfiles
 2. Update the *git submodules* to retrieve any third-party dependencies:
 ``` bash
 cd ~/.dotfiles
-git submodule init
-git submodule update
+git submodule update --init --recursive
 ```
 
 3. Run `install.php` to symlink all the dotfiles accordingly:
