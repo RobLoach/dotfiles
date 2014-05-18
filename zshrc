@@ -48,10 +48,14 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # Custom aliases
-source ~/.dotfiles.aliases
+if [ -f ~/.dotfiles.aliases ]; then
+    . ~/.dotfiles.aliases
+fi
 
 # Load oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+if [ -f $ZSH/oh-my-zsh.sh ]; then
+    source $ZSH/oh-my-zsh.sh
+fi
 
 # User configuration
 
@@ -67,4 +71,3 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-

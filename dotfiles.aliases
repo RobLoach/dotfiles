@@ -1,5 +1,5 @@
 # Load environmental aliases, if used.
 [[ -s ~/.dotfiles.aliases-env ]] && source ~/.dotfiles.aliases-env
 
-# Drush: https://github.com/drush-ops/drush
-alias drush="php -d memory_limit=1024M ~/.drush/drush.php"
+# Set the binaries for Composer
+export PATH=$PATH:~/.composer/vendor/bin

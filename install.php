@@ -52,7 +52,8 @@ function reverse_strrchr($haystack, $needle)
 /**
  * Utility function to recursively delete a directory.
  */
-function rrmdir($dir) {
+function rrmdir($dir)
+{
     foreach(glob($dir . '/*') as $file) {
         if(is_dir($file)) {
             rrmdir($file);
@@ -67,7 +68,8 @@ function rrmdir($dir) {
 /**
  * Recursively scan through to get a list of each file in the directory.
  */
-foreach (scandir_recursive(__DIR__) as $file) {
+foreach (scandir_recursive(__DIR__) as $file)
+{
     // Remove the base directory from the absolute file path.
     $file = str_replace(__DIR__ . '/', '', $file);
 

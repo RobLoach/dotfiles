@@ -1,2 +1,19 @@
-# Sublime workspace files.
-*package.sublime-workspace*
+# Vagrant
+.vagrant
+
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# SVN
+.svn
+
+# CVS
+/CVS/*
+*/CVS/*
+.cvsignore
+*/.cvsignore
