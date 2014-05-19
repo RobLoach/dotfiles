@@ -1,0 +1,6 @@
+{
+    "require": {
+        "composer/composer": "@alpha",
+        "drush/drush": "@alpha"
+    }
+}
