@@ -1,39 +1,41 @@
-# Rob's Dotfiles
+# Rob Loach's Dotfiles
 
-[Bash-It](https://github.com/revans/bash-it) or [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/) usage.
+Everyone loves [Dotfiles](http://dotfiles.github.io). Feel free to use mine, if you want.
 
 
 ## Dependencies
 
 * [git](http://git-scm.com)
-* [php](http://php.net)
+* [PHP](http://php.net)
+* [Zsh](http://www.zsh.org/)
 
 
 ## Features
 
-* [Bash-It](https://github.com/revans/bash-it) if on [bash](https://www.gnu.org/software/bash/)
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/) if on [zsh](http://www.zsh.org/)
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/)
 * Custom Environmental Aliases
   * `cp ~/.dotfiles/.dotfiles.aliases-env ~/.dotfiles.aliases-env`
+* [Composer](http://getcomposer.org) global installation
+* Git configruation
 
 
 ## Installation
 
 1. Check out the repository into something like `~/.dotfiles`:
-``` bash
-git clone git@github.com:RobLoach/dotfiles.git ~/.dotfiles
-```
+  ``` bash
+  git clone git@github.com:RobLoach/dotfiles.git ~/.dotfiles
+  ```
 
 2. Update the *git submodules* to retrieve any third-party dependencies:
-``` bash
-cd ~/.dotfiles
-git submodule update --init --recursive
-```
+  ``` bash
+  cd ~/.dotfiles
+  git submodule update --init --recursive
+  ```
 
 3. Run `install.php` to symlink all the dotfiles accordingly:
-``` bash
-php ~/.dotfiles/install.php
-```
+  ``` bash
+  php ~/.dotfiles/install.php
+  ```
 
 
 ## License
