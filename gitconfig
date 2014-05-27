@@ -1,13 +1,19 @@
 [user]
-	email = robloach@gmail.com
-	name = Rob Loach
+  email = robloach@gmail.com
+  name = Rob Loach
 
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
+  autocrlf = false
+  safecrlf = false
+  ignorecase = false
 
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    ui = auto
-    interactive = auto
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
+  interactive = auto
+
+[diff]
+  renames = copies
