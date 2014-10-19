@@ -1,6 +1,6 @@
 {
     "require": {
         "composer/composer": "@alpha",
-        "drush/drush": "~7.0.0@alpha"
+        "drush/drush": "~7.0.0-alpha5"
     }
 }

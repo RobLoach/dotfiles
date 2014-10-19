@@ -1,5 +1,2 @@
 # Load environmental aliases, if used.
 [[ -s ~/.dotfiles.aliases-env ]] && source ~/.dotfiles.aliases-env
-
-# Set the binaries for Composer
-export PATH=$PATH:~/.composer/vendor/bin
