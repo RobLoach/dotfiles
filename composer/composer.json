@@ -1,7 +1,8 @@
 {
     "require": {
-        "composer/composer": "@alpha",
+        "composer/composer": "master@dev",
         "drush/drush": "~7.0.0-alpha5",
 	"gushphp/gush": "~1.13.0"
-    }
+    },
+    "minimum-stability": "alpha"
 }
