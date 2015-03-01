@@ -3,20 +3,25 @@
 Everyone loves [Dotfiles](http://dotfiles.github.io). Feel free to use mine, if you want.
 
 
+## Features
+
+* [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh/), with plugins:
+  * git
+  * composer
+  * npm
+  * docker
+  * go
+* [Git config](gitconfig)
+* [Composer config](http://getcomposer.org)
+* Environmental aliases
+  * `cp ~/.dotfiles/.dotfiles.aliases-env ~`
+
+
 ## Dependencies
 
 * [git](http://git-scm.com)
 * [PHP](http://php.net)
 * [Zsh](http://www.zsh.org/)
-
-
-## Features
-
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/)
-* Custom Environmental Aliases
-  * `cp ~/.dotfiles/.dotfiles.aliases-env ~/.dotfiles.aliases-env`
-* [Composer](http://getcomposer.org) global installation
-* Git configruation
 
 
 ## Installation
