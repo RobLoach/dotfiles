@@ -3,7 +3,7 @@
   name = Rob Loach
 
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitconfig.core.excludesfile
   autocrlf = false
   safecrlf = false
   ignorecase = false
@@ -26,3 +26,6 @@
   tags = tag -l
   branches = branch -a
   remotes = remote -v
+
+[commit]
+  template = ~/.gitconfig.commit.template

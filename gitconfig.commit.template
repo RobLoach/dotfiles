@@ -1,0 +1,30 @@
+<type>(<scope>): <subject>
+
+#
+# <body>
+#
+# <footer>
+#
+# Type
+# * chore:    Updating dependencies, simple changes, etc
+# * docs:     Updates to the documentation
+# * feat:     New feature
+# * fix:      Bug fix
+# * refactor: Changing the way the code is set up
+# * style:    Fixes to the whitespace, coding standards, etc
+# * test:     Adding any missing tests, changing the way they're set up, etc
+#
+# Scope
+# A way to categorize commits across on a per-project basis.
+# Example: admin, dependencies, logging
+#
+# Subject
+# Description of what you did in the imperative tone.
+# Example: Update dependencies in the Plugin system.
+#
+# Body
+# Any details into what this commit accomplishes, in markdown format.
+#
+# Footer
+# References to issues that are affected by this commit.
+# Example: Fixes #2 and #5, references #7
