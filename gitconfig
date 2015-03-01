@@ -29,3 +29,6 @@
 
 [commit]
   template = ~/.gitconfig.commit.template
+
+[help]
+  autocorrect = 1
