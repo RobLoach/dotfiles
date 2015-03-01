@@ -28,3 +28,7 @@
 # Footer
 # References to issues that are affected by this commit.
 # Example: Fixes #2 and #5, references #7
+#
+# Template Installation
+# curl https://raw.githubusercontent.com/RobLoach/dotfiles/master/gitconfig.commit.template >> ~/.gitconfig.commit.template
+# git config --global commit.template ~/.gitconfig.commit.template
