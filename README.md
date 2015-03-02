@@ -22,26 +22,28 @@ Everyone loves [Dotfiles](http://dotfiles.github.io), feel free to use mine.
 ## Dependencies
 
 * [git](http://git-scm.com)
-* [PHP](http://php.net)
-* [Zsh](http://www.zsh.org/)
+* [make](http://gnu.org/software/make)
+* [Zsh](http://www.zsh.org)
 
 
 ## Installation
 
-1. Check out the repository into something like `~/.dotfiles`:
+1. Check out the repository into `~/.dotfiles`:
   ``` bash
   git clone git@github.com:RobLoach/dotfiles.git ~/.dotfiles
   ```
 
-2. Update the *git submodules* to retrieve any third-party dependencies:
+2. Install the dotfiles by using [make](http://www.gnu.org/software/make/):
   ``` bash
   cd ~/.dotfiles
-  git submodule update --init --recursive
+  make
   ```
 
-3. Run `install.php` to symlink all the dotfiles accordingly:
-  ``` bash
-  php ~/.dotfiles/install.php
+
+## Uninstall
+
+  ```
+  make clean
   ```
 
 
