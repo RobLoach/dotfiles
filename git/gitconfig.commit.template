@@ -30,5 +30,5 @@
 # Example: Fixes #2 and #5, references #7
 #
 # Template Installation
-# curl https://raw.githubusercontent.com/RobLoach/dotfiles/master/gitconfig.commit.template >> ~/.gitconfig.commit.template
+# curl https://raw.githubusercontent.com/RobLoach/dotfiles/master/git/gitconfig.commit.template >> ~/.gitconfig.commit.template
 # git config --global commit.template ~/.gitconfig.commit.template

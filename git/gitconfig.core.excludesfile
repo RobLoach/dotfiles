@@ -1,3 +1,6 @@
+# Git Global Ignore
+# http://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#idp16580400
+
 # Vagrant
 .vagrant
 
