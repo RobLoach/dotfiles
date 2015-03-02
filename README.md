@@ -42,9 +42,9 @@ Everyone loves [Dotfiles](http://dotfiles.github.io), feel free to use mine.
 
 ## Uninstall
 
-  ```
-  make clean
-  ```
+```
+make clean
+```
 
 
 ## License
