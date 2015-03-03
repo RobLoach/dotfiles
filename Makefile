@@ -23,7 +23,7 @@ clean-node:
 
 php: clean-php
 	@mkdir -p ${HOME}/.composer
-	@ln -fs $(DOTFILES)/composer/composer.json ${HOME}/.composer/composer.json
+	@ln -fs $(DOTFILES)/php composer/composer.json ${HOME}/.composer/composer.json
 clean-php:
 	@rm -f ${HOME}/.composer/composer.json
 
