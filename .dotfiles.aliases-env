@@ -1,4 +1,0 @@
-# Environmental aliases for the given environment (example file).
-
-# This is an example of forcing PHP to use PHP 5.4.
-source php="php-5.4"

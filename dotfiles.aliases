@@ -1,2 +1,0 @@
-# Load environmental aliases, if used.
-[[ -s ~/.dotfiles.aliases-env ]] && source ~/.dotfiles.aliases-env
