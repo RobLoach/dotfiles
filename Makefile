@@ -8,7 +8,7 @@ submodule:
 
 autoenv: clean-autoenv submodule
 	@echo -n "autoenv "
-	@ln -fs $(DOTFILES)/autoenv ${HOME}/.autoenv
+	@ln -fs $(DOTFILES)/shell/autoenv ${HOME}/.autoenv
 	@echo "is configured"
 clean-autoenv:
 	@rm -f ${HOME}/.autoenv

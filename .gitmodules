@@ -7,3 +7,6 @@
 [submodule "autoenv"]
 	path = autoenv
 	url = git@github.com:kennethreitz/autoenv.git
+[submodule "shell/autoenv"]
+	path = shell/autoenv
+	url = git@github.com:kennethreitz/autoenv.git
