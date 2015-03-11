@@ -4,3 +4,6 @@
 [submodule "node/nvm"]
 	path = node/nvm
 	url = git@github.com:creationix/nvm.git
+[submodule "autoenv"]
+	path = autoenv
+	url = git@github.com:kennethreitz/autoenv.git

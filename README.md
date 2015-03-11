@@ -1,21 +1,15 @@
 # Rob Loach's Dotfiles
 
-Everyone loves [Dotfiles](http://dotfiles.github.io), feel free to use mine.
+Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the
+deployment of complete development environments.
 
 
 ## Features
 
-* [Composer config](http://getcomposer.org)
-* [Git config](gitconfig)
-* Environmental aliases
-  * `cp ~/.dotfiles/.dotfiles.aliases-env ~`
-* [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh/), with plugins:
-  * composer
-  * docker
-  * git
-  * go
-  * npm
-  * nvm
+* [autoenv](http://github.com/kennethreitz/autoenv)
+* [Composer](http://getcomposer.org) configuration
+* [Git](http://www.git-scm.com/) configuration
+* [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh/)
 * [nvm](https://github.com/creationix/nvm)
 
 
