@@ -25,6 +25,13 @@ clean-git:
 	@rm -f ${HOME}/.gitconfig.commit.template
 	@rm -f ${HOME}/.gitconfig.core.excludesfile
 
+gnome: clean-gnome
+	@echo -n "gnome "
+	@ln -fs $(DOTFILES)/gnome/face ${HOME}/.face
+	@echo "configured"
+clean-gnome:
+	@rm -f ${HOME}/.face
+
 node: clean-node
 	@echo -n "node "
 	@ln -fs $(DOTFILES)/node/nvm ${HOME}/.nvm
