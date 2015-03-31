@@ -1,10 +1,12 @@
 DOTFILES := $(shell pwd)
 
-all: submodule autoenv git node php zsh
-clean: clean-autoenv clean-git clean-node clean-php clean-zsh
+all: submodule autoenv git gnome node php zsh
+clean: clean-submodule clean-autoenv clean-git clean-gnome clean-node clean-php clean-zsh
 
 submodule:
 	@git submodule update --init --recursive
+clean-submodule:
+	@git submodule deinit -f .
 
 autoenv: clean-autoenv submodule
 	@echo -n "autoenv "
