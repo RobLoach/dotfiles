@@ -47,7 +47,7 @@ node: clean-node
 	@echo -n "node "
 	@ln -fs $(DOTFILES)/node/nvm ${HOME}/.nvm
 	@ln -fs $(DOTFILES)/node/nvmrc ${HOME}/.nvmrc
-	-@. ~/.nvm/nvm.sh; nvm install stable && nvm alias default stable
+	-@. ~/.nvm/nvm.sh; nvm install stable && nvm alias default stable && nvm use --delete-prefix stable
 clean-node:
 	@rm -rf ${HOME}/.nvm
 	@rm -f ${HOME}/.nvmrc
