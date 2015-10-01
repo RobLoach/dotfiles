@@ -1,8 +1,7 @@
 {
   "require": {
     "composer/composer": "*",
-    "drush/drush": "^8.0@beta",
-    "gushphp/gush": "*"
+    "drush/drush": "^8.0@beta"
   },
   "minimum-stability": "alpha"
 }
