@@ -1,5 +1,4 @@
-LICENSE
-=======
+# LICENSE
 
 Dotfiles is released under the MIT License:
 

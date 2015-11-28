@@ -1,8 +1,6 @@
 # Rob Loach's Dotfiles
 
-Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the
-deployment of complete development environments.
-
+Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the deployment of complete development environments.
 
 ## Features
 
@@ -12,13 +10,11 @@ deployment of complete development environments.
 * [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh/)
 * [nvm](https://github.com/creationix/nvm)
 
-
 ## Dependencies
 
 * [git](http://git-scm.com)
 * [make](http://gnu.org/software/make)
 * [Zsh](http://www.zsh.org)
-
 
 ## Installation
 
@@ -33,13 +29,11 @@ deployment of complete development environments.
   make
   ```
 
-
 ## Uninstall
 
 ```
 make clean
 ```
-
 
 ## License
 

@@ -1,8 +1,7 @@
 {
   "require": {
-    "composer/composer": "*",
-    "drush/drush": "^8.0@rc",
+    "composer/composer": "^1.0@alpha",
+    "drush/drush": "^8.0",
     "phpunit/phpunit": "~5.0"
-  },
-  "minimum-stability": "alpha"
+  }
 }
