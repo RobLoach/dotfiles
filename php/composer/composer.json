@@ -3,6 +3,7 @@
     "composer/composer": "^1.0@alpha",
     "drush/drush": "^8.0",
     "phpunit/phpunit": "~5.0",
-    "drupal/console": "0.9.*"
+    "drupal/console": "~0.9",
+    "pantheon-systems/cli": "~0.10"
   }
 }
