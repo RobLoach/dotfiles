@@ -44,7 +44,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autoenv composer docker git go npm nvm)
+plugins=(autoenv composer docker docker-compose git go npm nvm)
 
 # User configuration
 
