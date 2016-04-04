@@ -57,7 +57,7 @@ php: clean-php bin
 	@echo -n "php "
 	@mkdir -p ${HOME}/.composer
 	@ln -fs $(DOTFILES)/php/composer/composer.json ${HOME}/.composer/composer.json
-	@which curl && which php && curl -sS https://getcomposer.org/installer | php -- --install-dir="${HOME}/.bin" --filename=composer --version=1.0.0-alpha10 && php "${HOME}/.bin/composer" install --working-dir="${HOME}/.composer"
+	@which curl && which php && curl -sS https://getcomposer.org/installer | php -- --install-dir="${HOME}/.bin" --filename=composer --version=1.0.0-beta2 && php "${HOME}/.bin/composer" install --working-dir="${HOME}/.composer"
 	@echo "configured"
 clean-php:
 	@rm -f ${HOME}/.composer/composer.json
