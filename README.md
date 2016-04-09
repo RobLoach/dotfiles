@@ -31,7 +31,8 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the depl
 
 ## Uninstall
 
-```
+``` bash
+cd ~/.dotfiles
 make clean
 ```
 

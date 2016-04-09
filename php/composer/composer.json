@@ -1,6 +1,6 @@
 {
   "require": {
-    "composer/composer": "*@beta",
+    "composer/composer": "1.*",
     "drush/drush": "*",
     "phpunit/phpunit": "*",
     "drupal/console": "*",
