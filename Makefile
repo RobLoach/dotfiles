@@ -41,7 +41,7 @@ node: clean-node
 	@echo "\033[1mNode.js\033[0m"
 	@ln -fs $(DOTFILES)/node/nvm ${HOME}/.nvm
 	@ln -fs $(DOTFILES)/node/nvmrc ${HOME}/.nvmrc
-	-@. $(DOTFILES)/node/nvm/nvm.sh && nvm install 5 --delete-prefix; nvm use 5 --delete-prefix
+	-@. $(DOTFILES)/node/nvm/nvm.sh; nvm install
 clean-node:
 	@rm -rf ${HOME}/.nvm
 	@rm -f ${HOME}/.nvmrc
