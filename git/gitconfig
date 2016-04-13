@@ -1,3 +1,6 @@
+[branch]
+  autosetuprebase = always
+
 [user]
   email = robloach@gmail.com
   name = Rob Loach
@@ -7,6 +10,7 @@
   autocrlf = false
   safecrlf = false
   ignorecase = false
+  mergeoptions = --no-commit
 
 [color]
   diff = auto
