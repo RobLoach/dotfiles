@@ -1,7 +1,7 @@
 {
   "require": {
     "composer/composer": "1.*",
-    "drush/drush": "*",
+    "drush/drush": "9.*@alpha",
     "phpunit/phpunit": "*",
     "drupal/console": "*",
     "pantheon-systems/cli": "*"
