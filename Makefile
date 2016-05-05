@@ -1,7 +1,7 @@
 DOTFILES := $(shell pwd)
 
-all: submodule bin autoenv git gnome node php zsh
-clean: clean-submodule clean-autoenv clean-git clean-gnome clean-node clean-php clean-zsh clean-bin
+all: submodule bin git gnome node php vim zsh
+clean: clean-submodule clean-git clean-gnome clean-node clean-php clean-vim clean-zsh clean-bin
 
 submodule:
 	@echo "\033[1mSubmodules\033[0m"
@@ -13,13 +13,6 @@ bin:
 	@mkdir -p ${HOME}/.bin
 clean-bin:
 	@rmdir --ignore-fail-on-non-empty ${HOME}/.bin || true
-
-autoenv: clean-autoenv submodule
-	@echo "\033[1mautoenv\033[0m"
-	@ln -fs $(DOTFILES)/shell/autoenv ${HOME}/.autoenv
-clean-autoenv:
-	@rm -f ${HOME}/.autoenv
-	@rm -f ${HOME}/.autoenv_authorized*
 
 git: clean-git
 	@echo "\033[1mgit\033[0m"
@@ -37,7 +30,7 @@ gnome: clean-gnome
 clean-gnome:
 	@rm -f ${HOME}/.face
 
-node: clean-node
+node: clean-node submodule
 	@echo "\033[1mNode.js\033[0m"
 	@ln -fs $(DOTFILES)/node/nvm ${HOME}/.nvm
 	@ln -fs $(DOTFILES)/node/nvmrc ${HOME}/.nvmrc
@@ -58,7 +51,15 @@ php: clean-php bin
 clean-php:
 	@rm -f ${HOME}/.composer/composer.json
 
-zsh: clean-zsh
+vim: clean-vim submodule
+	@echo "\033[1mvim\033[0m"
+	@ln -fs $(DOTFILES)/vimrc ${HOME}/.vim_runtime
+	@ln -fs $(DOTFILES)/vimrc/vimrcs/basic.vim ${HOME}/.vimrc
+clean-vim:
+	@rm -rf ${HOME}/.vim_runtime
+	@rm -f ${HOME}/.vimrc
+
+zsh: clean-zsh submodule
 	@echo "\033[1mzsh\033[0m"
 	@ln -fs $(DOTFILES)/zsh/oh-my-zsh ${HOME}/.oh-my-zsh
 	@ln -fs $(DOTFILES)/zsh/zshrc ${HOME}/.zshrc

@@ -4,11 +4,11 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the depl
 
 ## Features
 
-* [autoenv](http://github.com/kennethreitz/autoenv)
 * [Composer](http://getcomposer.org) configuration
 * [Git](http://www.git-scm.com/) configuration
 * [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh/)
 * [nvm](https://github.com/creationix/nvm)
+* [vimrc](https://github.com/amix/vimrc)
 
 ## Dependencies
 

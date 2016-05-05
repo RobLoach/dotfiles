@@ -4,6 +4,6 @@
 [submodule "node/nvm"]
 	path = node/nvm
 	url = https://github.com/creationix/nvm.git
-[submodule "shell/autoenv"]
-	path = shell/autoenv
-	url = https://github.com/kennethreitz/autoenv.git
+[submodule "vimrc"]
+	path = vimrc
+	url = https://github.com/amix/vimrc.git
