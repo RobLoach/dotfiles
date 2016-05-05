@@ -8,7 +8,6 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the depl
 * [Git](http://www.git-scm.com/) configuration
 * [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh/)
 * [nvm](https://github.com/creationix/nvm)
-* [vimrc](https://github.com/amix/vimrc)
 
 ## Dependencies
 

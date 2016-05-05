@@ -1,7 +1,7 @@
 DOTFILES := $(shell pwd)
 
-all: submodule bin git gnome node php vim zsh
-clean: clean-submodule clean-git clean-gnome clean-node clean-php clean-vim clean-zsh clean-bin
+all: submodule bin git gnome node php zsh
+clean: clean-submodule clean-git clean-gnome clean-node clean-php clean-zsh clean-bin
 
 submodule:
 	@echo "\033[1mSubmodules\033[0m"
@@ -50,14 +50,6 @@ php: clean-php bin
 		rm -rf /tmp/composer-setup.php /tmp/composer.phar
 clean-php:
 	@rm -f ${HOME}/.composer/composer.json
-
-vim: clean-vim submodule
-	@echo "\033[1mvim\033[0m"
-	@ln -fs $(DOTFILES)/vimrc ${HOME}/.vim_runtime
-	@ln -fs $(DOTFILES)/vimrc/vimrcs/basic.vim ${HOME}/.vimrc
-clean-vim:
-	@rm -rf ${HOME}/.vim_runtime
-	@rm -f ${HOME}/.vimrc
 
 zsh: clean-zsh submodule
 	@echo "\033[1mzsh\033[0m"
