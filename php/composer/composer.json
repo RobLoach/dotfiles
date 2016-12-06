@@ -1,9 +1,10 @@
 {
   "require": {
-    "composer/composer": "1.*",
+    "composer/composer": "*",
     "drush/drush": "8.*",
-    "drupal/console": "1.*",
+    "drupal/console": "*",
     "pantheon-systems/terminus": "*",
-    "sllh/composer-versions-check": "^2.0"
-  }
+    "sllh/composer-versions-check": "*"
+  },
+  "minimum-stability": "alpha"
 }
