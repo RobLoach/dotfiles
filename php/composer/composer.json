@@ -3,8 +3,7 @@
     "composer/composer": "*",
     "drush/drush": "8.*",
     "drupal/console": "*",
-    "pantheon-systems/terminus": "*",
-    "sllh/composer-versions-check": "*"
+    "pantheon-systems/terminus": "*"
   },
-  "minimum-stability": "alpha"
+  "minimum-stability": "beta"
 }

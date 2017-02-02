@@ -42,7 +42,7 @@ php: clean-php bin
 	@mkdir -p ${HOME}/.composer
 	@ln -fs $(DOTFILES)/php/composer/composer.json ${HOME}/.composer/composer.json
 	@which php && php -r "readfile('https://getcomposer.org/installer');" > /tmp/composer-setup.php && \
-		php -r "if (hash('SHA384', file_get_contents('/tmp/composer-setup.php')) === 'a52be7b8724e47499b039d53415953cc3d5b459b9d9c0308301f867921c19efc623b81dfef8fc2be194a5cf56945d223') { echo 'Composer Installer verified. '; } else { echo 'Composer Installer corrupt. '; unlink('/tmp/composer-setup.php'); exit(1); }" && \
+		php -r "if (hash('SHA384', file_get_contents('/tmp/composer-setup.php')) === '55d6ead61b29c7bdee5cccfb50076874187bd9f21f65d8991d46ec5cc90518f447387fb9f76ebae1fbbacf329e583e30') { echo 'Composer Installer verified. '; } else { echo 'Composer Installer corrupt. '; unlink('/tmp/composer-setup.php'); exit(1); }" && \
 		php /tmp/composer-setup.php --install-dir=/tmp --filename=composer.phar --version=1.0.0 && \
 		/tmp/composer.phar install --working-dir ~/.composer --no-interaction --prefer-dist --optimize-autoloader --no-dev && \
 		rm -rf /tmp/composer-setup.php /tmp/composer.phar
