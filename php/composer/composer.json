@@ -1,9 +1,13 @@
 {
-  "require": {
-    "composer/composer": "*",
-    "drush/drush": "*",
-    "drupal/console": "*",
-    "pantheon-systems/terminus": "*"
-  },
-  "minimum-stability": "alpha"
+	"require": {
+		"composer/composer": "*",
+		"pantheon-systems/terminus": "*"
+	},
+	"config": {
+		"preferred-install": {
+			"*": "dist"
+		},
+		"optimize-autoloader": true
+	},
+	"minimum-stability": "alpha"
 }
