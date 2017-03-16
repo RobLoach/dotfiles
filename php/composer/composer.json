@@ -1,9 +1,9 @@
 {
   "require": {
     "composer/composer": "*",
-    "drush/drush": "8.*",
+    "drush/drush": "*",
     "drupal/console": "*",
     "pantheon-systems/terminus": "*"
   },
-  "minimum-stability": "beta"
+  "minimum-stability": "alpha"
 }
