@@ -2,9 +2,7 @@
 	"require": {
 		"composer/composer": "*",
 		"pantheon-systems/terminus": "*",
-		"phpunit/phpunit": "^6.1",
-		"sllh/composer-versions-check": "^2.0",
-		"drush/drush": "8.x"
+		"drush/drush": "*"
 	},
 	"config": {
 		"preferred-install": {
