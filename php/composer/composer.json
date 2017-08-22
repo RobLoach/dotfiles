@@ -9,6 +9,5 @@
 			"*": "dist"
 		},
 		"optimize-autoloader": true
-	},
-	"minimum-stability": "alpha"
+	}
 }
