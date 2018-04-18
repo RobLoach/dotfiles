@@ -4,3 +4,6 @@
 [submodule "node/nvm"]
 	path = node/nvm
 	url = https://github.com/creationix/nvm.git
+[submodule "zsh/oh-my-zsh--robloach"]
+	path = zsh/oh-my-zsh--robloach
+	url = https://github.com/RobLoach/oh-my-zsh.git
