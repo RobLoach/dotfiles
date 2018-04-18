@@ -42,7 +42,7 @@ php: clean-php bin
 	@mkdir -p ${HOME}/.composer
 	@ln -fs $(DOTFILES)/php/composer/composer.json ${HOME}/.composer/composer.json
 	@which php && php -r "readfile('https://getcomposer.org/installer');" > /tmp/composer-setup.php && \
-		php -r "if (hash('SHA384', file_get_contents('/tmp/composer-setup.php')) === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Composer Installer verified. '; } else { echo 'Composer Installer corrupt. '; unlink('/tmp/composer-setup.php'); exit(1); }" && \
+		php -r "if (hash('SHA384', file_get_contents('/tmp/composer-setup.php')) === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Composer Installer verified. '; } else { echo 'Composer Installer corrupt. '; unlink('/tmp/composer-setup.php'); exit(1); }" && \
 		php /tmp/composer-setup.php --install-dir=/tmp --filename=composer.phar --version=1.0.0 && \
 		/tmp/composer.phar install --working-dir ~/.composer --no-interaction --prefer-dist --optimize-autoloader --no-dev && \
 		rm -rf /tmp/composer-setup.php /tmp/composer.phar
@@ -51,7 +51,7 @@ clean-php:
 
 zsh: clean-zsh submodule
 	@echo "\033[1mzsh\033[0m"
-	@ln -fs $(DOTFILES)/zsh/oh-my-zsh ${HOME}/.oh-my-zsh
+	@ln -fs $(DOTFILES)/zsh/oh-my-zsh--robloach ${HOME}/.oh-my-zsh
 	@ln -fs $(DOTFILES)/zsh/zshrc ${HOME}/.zshrc
 clean-zsh:
 	@rm -rf ${HOME}/.oh-my-zsh
