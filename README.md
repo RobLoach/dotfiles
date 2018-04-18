@@ -19,7 +19,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the depl
 
 1. Check out the repository into `~/.dotfiles`:
   ``` bash
-  git clone git@github.com:RobLoach/dotfiles.git ~/.dotfiles
+  git clone https://github.com/RobLoach/dotfiles.git ~/.dotfiles
   ```
 
 2. Install the dotfiles by using [make](http://www.gnu.org/software/make/):
