@@ -50,6 +50,7 @@ plugins=(composer docker docker-compose git go nvm npm)
 
 export PATH=$HOME/.bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH=$HOME/Documents/lutris/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -72,6 +73,8 @@ export GOPATH=$HOME/.gocode
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
