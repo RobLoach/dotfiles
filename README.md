@@ -2,13 +2,6 @@
 
 Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the deployment of complete development environments.
 
-## Features
-
-* [Composer](http://getcomposer.org) configuration
-* [Git](http://www.git-scm.com/) configuration
-* [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh/)
-* [nvm](https://github.com/creationix/nvm)
-
 ## Dependencies
 
 * [git](http://git-scm.com)

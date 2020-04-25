@@ -44,7 +44,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(composer docker docker-compose git go nvm npm)
+plugins=(docker docker-compose git asdf)
 
 # User configuration
 
@@ -54,9 +54,6 @@ export PATH=$HOME/.cargo/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
-# Node.js
-nvm use --delete-prefix 7
 
 # Golang
 export GOPATH=$HOME/.gocode
@@ -88,3 +85,4 @@ export DEVKITARM=/opt/devkitpro/devkitARM
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/Documents/emsdk/emsdk_env.sh
