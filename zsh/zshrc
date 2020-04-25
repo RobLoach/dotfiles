@@ -85,4 +85,4 @@ export DEVKITARM=/opt/devkitpro/devkitARM
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/Documents/emsdk/emsdk_env.sh
+#source ~/Documents/emsdk/emsdk_env.sh
