@@ -36,7 +36,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -48,16 +48,13 @@ plugins=(docker docker-compose git asdf)
 
 # User configuration
 
-export PATH=$HOME/.gocode/bin:$HOME/.bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+
+export PATH=$HOME/Documents/RetroArch:$PATH
 export PATH=$HOME/Documents/lutris/bin:$PATH
-export PATH=$HOME/.cargo/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
-# Golang
-export GOPATH=$HOME/.gocode
-export CGO_ENABLED=1
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -68,11 +65,6 @@ export CGO_ENABLED=1
 # else
 #   export EDITOR='mvim'
 # fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitpro/devkitARM
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -85,4 +77,3 @@ export DEVKITARM=/opt/devkitpro/devkitARM
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#source ~/Documents/emsdk/emsdk_env.sh

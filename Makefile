@@ -1,7 +1,7 @@
 DOTFILES := $(shell pwd)
 
-all: submodule asdf bin git gnome node php zsh
-clean: clean-submodule clean-asdf clean-git clean-gnome clean-node clean-php clean-zsh clean-bin
+all: submodule asdf git gnome zsh
+clean: clean-submodule clean-asdf clean-git clean-gnome clean-zsh
 
 submodule:
 	@echo "\033[1mSubmodules\033[0m"
@@ -9,19 +9,15 @@ submodule:
 clean-submodule:
 	@git submodule deinit -f .
 
+# asdf
 ${HOME}/.asdf:
 	@ln -fs $(DOTFILES)/asdf ${HOME}/.asdf
-
 asdf: ${HOME}/.asdf
 	@echo "\033[1masdf\033[0m"
 clean-asdf:
 	@rm -f ${HOME}/.asdf
 
-bin:
-	@mkdir -p ${HOME}/.bin
-clean-bin:
-	@rmdir --ignore-fail-on-non-empty ${HOME}/.bin || true
-
+# git
 git: clean-git
 	@echo "\033[1mgit\033[0m"
 	@ln -fs $(DOTFILES)/git/gitconfig ${HOME}/.gitconfig
