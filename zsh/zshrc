@@ -47,11 +47,16 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(docker docker-compose git asdf)
 
 # User configuration
-
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
+# Binaries
 export PATH=$HOME/Documents/RetroArch:$PATH
 export PATH=$HOME/Documents/lutris/bin:$PATH
+
+# Global Composer vendor binary path
+COMPOSER_HOME_BIN_DIR="${COMPOSER_HOME:-$HOME/.config/composer}/vendor/bin"
+export PATH=$PATH:${COMPOSER_HOME_BIN_DIR}
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -77,3 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias python=python3
+alias pip=pip3
