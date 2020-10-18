@@ -52,6 +52,8 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 # Binaries
 export PATH=$HOME/Documents/RetroArch:$PATH
 export PATH=$HOME/Documents/lutris/bin:$PATH
+export PATH=$HOME/Documents/TIC-80/build/bin:$PATH
+export PATH=$HOME/Documents/wren-cli/bin:$PATH
 
 # Global Composer vendor binary path
 COMPOSER_HOME_BIN_DIR="${COMPOSER_HOME:-$HOME/.config/composer}/vendor/bin"
