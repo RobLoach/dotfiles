@@ -20,3 +20,6 @@ Session.vim
 */CVS/*
 .cvsignore
 */.cvsignore
+
+# Editors
+.vscode
