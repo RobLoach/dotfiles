@@ -19,8 +19,10 @@ Signed-off-by: Rob Loach <robloach@gmail.com>
 # Any details into what this commit accomplishes, in markdown format.
 #
 # Footer
-# References to issues that are affected by this commit.
+# References to issues that are affected by this commit, and the certificate of origin
 # Example: Fixes #2 and #5, references #7
+#
+# Signed-off-by: Random J Developer <random@developer.example.org>
 #
 # Template Installation
 # curl https://raw.githubusercontent.com/RobLoach/dotfiles/master/git/gitconfig.commit.template >> ~/.gitconfig.commit.template
