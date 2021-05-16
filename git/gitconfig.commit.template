@@ -1,20 +1,11 @@
 
 
 Signed-off-by: Rob Loach <robloach@gmail.com>
-# <type>(<scope>): <subject>
+# <scope>: <subject>
 #
 # <body>
 #
 # <footer>
-#
-# Type
-# * chore:    Updating dependencies, simple changes, etc
-# * docs:     Updates to the documentation
-# * feat:     New feature
-# * fix:      Bug fix
-# * refactor: Changing the way the code is set up
-# * style:    Fixes to the whitespace, coding standards, etc
-# * test:     Adding any missing tests, changing the way they're set up, etc
 #
 # Scope
 # A way to categorize commits across on a per-project basis.
@@ -22,7 +13,7 @@ Signed-off-by: Rob Loach <robloach@gmail.com>
 #
 # Subject
 # Description of what you did in the imperative tone.
-# Example: Update dependencies in the Plugin system.
+# Example: Update dependencies in the Plugin system
 #
 # Body
 # Any details into what this commit accomplishes, in markdown format.
