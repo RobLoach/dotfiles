@@ -1,7 +1,7 @@
 [user]
   email = robloach@gmail.com
   name = Rob Loach
-  signingkey = 4A74A21A
+	signingkey = BF759F3D663BE9DECDA2A773627C60834A74A21A
 
 [core]
   excludesfile = ~/.gitconfig.core.excludesfile
@@ -31,7 +31,7 @@
 
 [commit]
   template = ~/.gitconfig.commit.template
-  gpgsign = true
+	gpgsign = true
 
 [help]
   autocorrect = 1
