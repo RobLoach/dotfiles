@@ -61,6 +61,9 @@ export PATH=$PATH:${COMPOSER_HOME_BIN_DIR}
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Plugin configuration
+export WASI_SDK_PATH=$HOME/.asdf/installs/wasi-sdk/14/wasi-sdk
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
