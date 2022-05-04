@@ -47,7 +47,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(docker docker-compose git asdf)
 
 # User configuration
-export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$HOME/.bin:$PATH
 
 # Binaries
 export PATH=$HOME/Documents/RetroArch:$PATH
