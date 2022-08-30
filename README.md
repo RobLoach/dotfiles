@@ -2,11 +2,15 @@
 
 Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the deployment of complete development environments.
 
+## Features
+
+- fish defaults
+- asdf
+
 ## Dependencies
 
 * [git](http://git-scm.com)
 * [make](http://gnu.org/software/make)
-* [Zsh](http://www.zsh.org)
 
 ## Installation
 

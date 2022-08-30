@@ -1,7 +1,7 @@
 DOTFILES := $(shell pwd)
 
-all: submodule asdf git gnome zsh
-clean: clean-submodule clean-asdf clean-git clean-gnome clean-zsh
+all: submodule asdf git gnome fish
+clean: clean-submodule clean-asdf clean-git clean-gnome clean-fish
 
 submodule:
 	@echo "\033[1mSubmodules\033[0m"
@@ -34,10 +34,13 @@ gnome: clean-gnome
 clean-gnome:
 	@rm -f ${HOME}/.face
 
-zsh: clean-zsh submodule
-	@echo "\033[1mzsh\033[0m"
-	@ln -fs $(DOTFILES)/zsh/oh-my-zsh ${HOME}/.oh-my-zsh
-	@ln -fs $(DOTFILES)/zsh/zshrc ${HOME}/.zshrc
-clean-zsh:
-	@rm -rf ${HOME}/.oh-my-zsh
-	@rm -f ${HOME}/.zshrc
+# fish
+${HOME}/.config:
+	mkdir ${HOME}/.config
+
+${HOME}/.config/fish: ${HOME}/.config
+	@ln -fs $(DOTFILES)/fish ${HOME}/.config/fish
+fish: ${HOME}/.config/fish
+	@echo "\033[1mfish\033[0m"
+clean-fish:
+	@rm -f ${HOME}/.config/fish
