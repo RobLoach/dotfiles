@@ -1,39 +1,42 @@
 [user]
-  email = robloach@gmail.com
-  name = Rob Loach
+	email = robloach@gmail.com
+	name = Rob Loach
 	signingkey = BF759F3D663BE9DECDA2A773627C60834A74A21A
 
 [core]
-  excludesfile = ~/.gitconfig.core.excludesfile
-  autocrlf = false
-  safecrlf = false
-  ignorecase = false
-  longpaths = true
+	excludesfile = ~/.gitconfig.core.excludesfile
+	autocrlf = false
+	safecrlf = false
+	ignorecase = false
+	longpaths = true
 
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  ui = auto
-  interactive = auto
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+	interactive = auto
 
 [diff]
-  renames = copies
+	renames = copies
 
 [alias]
-  co = checkout
-  cm = commit
-  p = push
-  # Show verbose output about tags, branches or remotes
-  tags = tag -l
-  branches = branch -a
-  remotes = remote -v
+	co = checkout
+	cm = commit -m
+	p = push
+	# Show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	last = log -1 HEAD --stat
+	st = status -sb
 
 [commit]
-  template = ~/.gitconfig.commit.template
+	template = ~/.gitconfig.commit.template
 	gpgsign = true
 
 [help]
-  autocorrect = 1
+	autocorrect = 1
+
 [init]
 	defaultBranch = master

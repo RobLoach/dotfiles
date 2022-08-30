@@ -1,25 +1,35 @@
 DOTFILES := $(shell pwd)
 
-all: submodule asdf git gnome fish
-clean: clean-submodule clean-asdf clean-git clean-gnome clean-fish
+all: submodule asdf git gnome fishconfig
+clean: clean-submodule clean-asdf clean-git clean-gnome clean-fishconfig
 
-submodule:
-	@echo "\033[1mSubmodules\033[0m"
+asdf/bin:
 	@git submodule update --init --recursive
+
+submodule: asdf/bin
+	@echo "Submodules"
 clean-submodule:
 	@git submodule deinit -f .
 
 # asdf
 ${HOME}/.asdf:
 	@ln -fs $(DOTFILES)/asdf ${HOME}/.asdf
-asdf: ${HOME}/.asdf
-	@echo "\033[1masdf\033[0m"
+asdf: ${HOME}/.asdf asdf-plugins
+	@echo "asdf"
 clean-asdf:
 	@rm -f ${HOME}/.asdf
 
+asdf-plugins: ${HOME}/.asdf
+	-@source ${HOME}/.asdf/asdf.fish
+	-@. ${HOME}/.asdf/asdf.sh
+	-@asdf plugin add nodejs
+	-@asdf plugin add php
+	-@asdf plugin add emsdk
+	-@asdf plugin add python
+
 # git
 git: clean-git
-	@echo "\033[1mgit\033[0m"
+	@echo "git"
 	@ln -fs $(DOTFILES)/git/gitconfig ${HOME}/.gitconfig
 	@ln -fs $(DOTFILES)/git/gitconfig.commit.template ${HOME}/.gitconfig.commit.template
 	@ln -fs $(DOTFILES)/git/gitconfig.core.excludesfile ${HOME}/.gitconfig.core.excludesfile
@@ -29,18 +39,17 @@ clean-git:
 	@rm -f ${HOME}/.gitconfig.core.excludesfile
 
 gnome: clean-gnome
-	@echo "\033[1mGnome\033[0m"
+	@echo "Gnome"
 	@ln -fs $(DOTFILES)/gnome/face ${HOME}/.face
 clean-gnome:
 	@rm -f ${HOME}/.face
 
 # fish
 ${HOME}/.config:
-	mkdir ${HOME}/.config
-
+	mkdir -p ${HOME}/.config
 ${HOME}/.config/fish: ${HOME}/.config
 	@ln -fs $(DOTFILES)/fish ${HOME}/.config/fish
-fish: ${HOME}/.config/fish
-	@echo "\033[1mfish\033[0m"
-clean-fish:
+fishconfig: ${HOME}/.config/fish
+	@echo "fish"
+clean-fishconfig:
 	@rm -f ${HOME}/.config/fish
