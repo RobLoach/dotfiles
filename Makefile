@@ -26,6 +26,7 @@ asdf-plugins: ${HOME}/.asdf
 	-@asdf plugin add php
 	-@asdf plugin add emsdk
 	-@asdf plugin add python
+	-@asdf plugin add golang
 
 # git
 git: clean-git
