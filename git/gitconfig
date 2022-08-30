@@ -17,6 +17,9 @@
 	ui = auto
 	interactive = auto
 
+[pull]
+    rebase = false
+
 [diff]
 	renames = copies
 
