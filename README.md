@@ -4,8 +4,9 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the depl
 
 ## Features
 
-- fish defaults
-- asdf
+- [fish shell](https://fishshell.com/) for pretty shell defaults
+- [asdf-vm](https://asdf-vm.com/) for version management of development tools
+- git configs, commit templates, and aliases
 
 ## Dependencies
 
