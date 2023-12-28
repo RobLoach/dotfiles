@@ -4,7 +4,6 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the depl
 
 ## Features
 
-- [fish shell](https://fishshell.com/) for pretty shell defaults
 - [asdf-vm](https://asdf-vm.com/) for version management of development tools
 - git configs, commit templates, and aliases
 
@@ -12,6 +11,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the depl
 
 * [git](http://git-scm.com)
 * [make](http://gnu.org/software/make)
+* [bash](https://www.gnu.org/software/bash/)
 
 ## Installation
 

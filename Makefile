@@ -1,7 +1,7 @@
 DOTFILES := $(shell pwd)
 
-all: submodule asdf git gnome fishconfig ssh
-clean: clean-submodule clean-asdf clean-git clean-gnome clean-fishconfig clean-ssh
+all: submodule asdf git gnome ssh bash
+clean: clean-submodule clean-asdf clean-git clean-gnome clean-ssh clean-bash
 
 asdf/bin:
 	@git submodule update --init --recursive
@@ -20,8 +20,7 @@ clean-asdf:
 	@rm -f ${HOME}/.asdf
 
 asdf-plugins: ${HOME}/.asdf
-	-@source ${HOME}/.asdf/asdf.fish
-	-@. ${HOME}/.asdf/asdf.sh
+	-@. ~/.asdf/asdf.sh
 	-@asdf plugin add nodejs
 	-@asdf plugin add php
 	-@asdf plugin add emsdk
@@ -55,12 +54,10 @@ gnome: clean-gnome
 clean-gnome:
 	@rm -f ${HOME}/.face
 
-# fish
-${HOME}/.config:
-	mkdir -p ${HOME}/.config
-${HOME}/.config/fish: ${HOME}/.config
-	@ln -fs $(DOTFILES)/fish ${HOME}/.config/fish
-fishconfig: ${HOME}/.config/fish
-	@echo "fish"
-clean-fishconfig:
-	@rm -f ${HOME}/.config/fish
+# bash
+bash: ${HOME}/.bash_aliases
+	@echo "bash"
+${HOME}/.bash_aliases:
+	@ln -fs $(DOTFILES)/bash/.bash_aliases ${HOME}/.bash_aliases
+clean-bash:
+	@rm ${HOME}/.bash_aliases
