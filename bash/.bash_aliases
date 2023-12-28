@@ -5,3 +5,5 @@ fi
 if test -f "$HOME/.asdf/completions/asdf.bash"; then
   . "$HOME/.asdf/completions/asdf.bash"
 fi
+
+export AG_NO_CONTEXT=false

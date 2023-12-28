@@ -59,5 +59,9 @@ bash: ${HOME}/.bash_aliases
 	@echo "bash"
 ${HOME}/.bash_aliases:
 	@ln -fs $(DOTFILES)/bash/.bash_aliases ${HOME}/.bash_aliases
+	-@mv -f ${HOME}/.bashrc ${HOME}.bashrc.backup
+	@ln -fs $(DOTFILES)/bash/.bashrc ${HOME}/.bashrc
 clean-bash:
 	@rm ${HOME}/.bash_aliases
+	@rm ${HOME}/.bashrc
+	-@mv -f ${HOME}/.bashrc.backup ${HOME}.bashrc

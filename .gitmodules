@@ -2,3 +2,8 @@
 	path = asdf
 	url = https://github.com/asdf-vm/asdf.git
 	ignore = dirty
+	branch = master
+[submodule "oh-my-bash"]
+	path = oh-my-bash
+	url = https://github.com/ohmybash/oh-my-bash.git
+	branch = master
