@@ -7,3 +7,6 @@ if test -f "$HOME/.asdf/completions/asdf.bash"; then
 fi
 
 export AG_NO_CONTEXT=false
+
+alias platform='~/Documents/platformcli/vendor/bin/platform'
+alias retroarch='~/Documents/RetroArch/retroarch'
