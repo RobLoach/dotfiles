@@ -6,7 +6,7 @@ esac
 
 # Path to your oh-my-bash installation.
 export OSH="$HOME/.dotfiles/oh-my-bash"
-export PATH="$PATH:$HOME/.asdf/bin"
+export PATH="$PATH:$HOME/.asdf/bin:$HOME/.bin"
 
 
 # Set name of the theme to load. Optionally, if you set this to "random"
