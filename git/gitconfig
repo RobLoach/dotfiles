@@ -35,7 +35,7 @@
 	st = status -sb
 
 [commit]
-	template = ~/.gitconfig.commit.template
+	#template = ~/.gitconfig.commit.template
 	gpgsign = true
 
 [help]
