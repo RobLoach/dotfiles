@@ -146,3 +146,12 @@ source "$OSH"/oh-my-bash.sh
 
 # Playdate SDK Setup
 . ~/.asdf/plugins/playdate/setup.bash
+
+# Local/bin
+export PATH="$HOME/.local/bin:$PATH";
+
+# Rust/Cargo
+export PATH="$HOME/.cargo/bin:$PATH";
+
+# Lando
+export PATH="$HOME/.lando/bin:$PATH"; #landopath
