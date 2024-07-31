@@ -145,7 +145,7 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 # Playdate SDK Setup
-. ~/.asdf/plugins/playdate/setup.bash
+#. ~/.asdf/plugins/playdate/setup.bash
 
 # Local/bin
 export PATH="$HOME/.local/bin:$PATH";
