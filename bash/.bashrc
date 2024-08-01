@@ -8,7 +8,6 @@ esac
 export OSH="$HOME/.dotfiles/oh-my-bash"
 export PATH="$PATH:$HOME/.asdf/bin:$HOME/.bin"
 
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="purity"
@@ -36,10 +35,10 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -71,11 +70,11 @@ DISABLE_AUTO_UPDATE="true"
 # OMB_DEFAULT_ALIASES="check"
 
 # Would you like to use another custom folder than $OSH/custom?
-# OSH_CUSTOM=/path/to/new-custom-folder
+OSH_CUSTOM="$HOME/.dotfiles/bash/oh-my-bash-custom"
 
 # To disable the uses of "sudo" by oh-my-bash, please set "false" to
 # this variable.  The default behavior for the empty value is "true".
-OMB_USE_SUDO=true
+OMB_USE_SUDO=false
 
 # To enable/disable display of Python virtualenv and condaenv
 # OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
@@ -89,6 +88,11 @@ completions=(
   git
   composer
   ssh
+  drush
+  gh
+  makefile
+  npm
+  ssh
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -97,6 +101,7 @@ completions=(
 # Add wisely, as too many aliases slow down shell startup.
 aliases=(
   general
+  rob
 )
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -155,3 +160,6 @@ export PATH="$HOME/.cargo/bin:$PATH";
 
 # Lando
 export PATH="$HOME/.lando/bin:$PATH"; #landopath
+
+# RetroArch
+export PATH="$HOME/Documents/RetroArch:$PATH";
