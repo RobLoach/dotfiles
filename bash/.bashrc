@@ -8,7 +8,6 @@ esac
 export OSH="$HOME/.dotfiles/oh-my-bash"
 export PATH="$PATH:$HOME/.asdf/bin:$HOME/.bin"
 
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="purity"
@@ -87,6 +86,7 @@ OMB_USE_SUDO=true
 # Add wisely, as too many completions slow down shell startup.
 completions=(
   git
+  gh
   composer
   ssh
 )
@@ -114,7 +114,7 @@ plugins=(
 #      plugins+=(tmux-autoattach)
 #  fi
 
-source "$OSH"/oh-my-bash.sh
+source "$OSH/oh-my-bash.sh"
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -145,13 +145,23 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 # Playdate SDK Setup
-. ~/.asdf/plugins/playdate/setup.bash
+if [ -f "${XDG_CONFIG_HOME:-$HOME}/.asdf/plugins/playdate/setup.bash" ]; then
+  source "${XDG_CONFIG_HOME:-$HOME}/.asdf/plugins/playdate/setup.bash"
+fi
 
 # Local/bin
 export PATH="$HOME/.local/bin:$PATH";
+
+# RetroArch
+export PATH="$HOME/Documents/RetroArch:$PATH";
 
 # Rust/Cargo
 export PATH="$HOME/.cargo/bin:$PATH";
 
 # Lando
 export PATH="$HOME/.lando/bin:$PATH"; #landopath
+
+# Direnv
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc" ]; then
+  source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
+fi
