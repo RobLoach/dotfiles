@@ -1,3 +1,20 @@
 Host *.drush.in
     HostKeyAlgorithms +ssh-rsa
     PubkeyAcceptedKeyTypes +ssh-rsa
+
+Host *.acquia.com
+    IdentityFile ~/.ssh/New/id_rsa
+    #IdentitiesOnly yes # see NOTES below
+    #AddKeysToAgent yes
+
+Host *.acquia-sites.com
+    IdentityFile ~/.ssh/New/id_rsa
+    #IdentitiesOnly yes # see NOTES below
+    #AddKeysToAgent yes
+
+
+# BEGIN: Platform.sh certificate configuration
+Host *.platform.sh
+  Include /home/rob/.platformsh/ssh/*.config
+Host *
+# END: Platform.sh certificate configuration

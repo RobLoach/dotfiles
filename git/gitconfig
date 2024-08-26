@@ -43,3 +43,6 @@
 
 [init]
 	defaultBranch = master
+
+[include]
+	path = ~/.dotfiles/git/gitalias/gitalias.txt

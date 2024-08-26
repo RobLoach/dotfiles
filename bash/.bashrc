@@ -7,6 +7,7 @@ esac
 # Path to your oh-my-bash installation.
 export OSH="$HOME/.dotfiles/oh-my-bash"
 export PATH="$PATH:$HOME/.asdf/bin:$HOME/.bin"
+export AG_NO_CONTEXT=false
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
@@ -35,10 +36,10 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -70,11 +71,11 @@ DISABLE_AUTO_UPDATE="true"
 # OMB_DEFAULT_ALIASES="check"
 
 # Would you like to use another custom folder than $OSH/custom?
-# OSH_CUSTOM=/path/to/new-custom-folder
+OSH_CUSTOM="$HOME/.dotfiles/bash/oh-my-bash-custom"
 
 # To disable the uses of "sudo" by oh-my-bash, please set "false" to
 # this variable.  The default behavior for the empty value is "true".
-OMB_USE_SUDO=true
+OMB_USE_SUDO=false
 
 # To enable/disable display of Python virtualenv and condaenv
 # OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
@@ -86,9 +87,7 @@ OMB_USE_SUDO=true
 # Add wisely, as too many completions slow down shell startup.
 completions=(
   git
-  gh
-  composer
-  ssh
+  makefile
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -97,6 +96,7 @@ completions=(
 # Add wisely, as too many aliases slow down shell startup.
 aliases=(
   general
+  rob
 )
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -114,7 +114,17 @@ plugins=(
 #      plugins+=(tmux-autoattach)
 #  fi
 
-source "$OSH/oh-my-bash.sh"
+if test -f "$OSH/oh-my-bash.sh"; then
+	source "$OSH/oh-my-bash.sh"
+fi
+
+# asdf
+if test -f "$HOME/.asdf/asdf.sh"; then
+  source "$HOME/.asdf/asdf.sh"
+fi
+if test -f "$HOME/.asdf/completions/asdf.bash"; then
+  source "$HOME/.asdf/completions/asdf.bash"
+fi
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -165,3 +175,6 @@ export PATH="$HOME/.lando/bin:$PATH"; #landopath
 if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc" ]; then
   source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
 fi
+
+# RetroArch
+export PATH="$HOME/Documents/RetroArch:$PATH";
