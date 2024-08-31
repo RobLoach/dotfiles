@@ -6,7 +6,7 @@ esac
 
 # Path to your oh-my-bash installation.
 export OSH="$HOME/.dotfiles/oh-my-bash"
-export PATH="$PATH:$HOME/.asdf/bin:$HOME/.bin"
+export PATH="$PATH:$HOME/.bin"
 export AG_NO_CONTEXT=false
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -88,6 +88,8 @@ OMB_USE_SUDO=false
 completions=(
   git
   makefile
+  asdf
+  composer
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -105,6 +107,7 @@ aliases=(
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  asdf
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -116,14 +119,6 @@ plugins=(
 
 if test -f "$OSH/oh-my-bash.sh"; then
 	source "$OSH/oh-my-bash.sh"
-fi
-
-# asdf
-if test -f "$HOME/.asdf/asdf.sh"; then
-  source "$HOME/.asdf/asdf.sh"
-fi
-if test -f "$HOME/.asdf/completions/asdf.bash"; then
-  source "$HOME/.asdf/completions/asdf.bash"
 fi
 
 # User configuration
@@ -155,9 +150,9 @@ fi
 # alias ohmybash="mate ~/.oh-my-bash"
 
 # Playdate SDK Setup
-if [ -f "${XDG_CONFIG_HOME:-$HOME}/.asdf/plugins/playdate/setup.bash" ]; then
-  source "${XDG_CONFIG_HOME:-$HOME}/.asdf/plugins/playdate/setup.bash"
-fi
+# if [ -f "${XDG_CONFIG_HOME:-$HOME}/.asdf/plugins/playdate/setup.bash" ]; then
+#   source "${XDG_CONFIG_HOME:-$HOME}/.asdf/plugins/playdate/setup.bash"
+# fi
 
 # Local/bin
 export PATH="$HOME/.local/bin:$PATH";
