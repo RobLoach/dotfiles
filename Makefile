@@ -77,8 +77,8 @@ clean-vim:
 
 nano: clean-nano
 	@echo "nano"
-	@ln -s $(DOTFILES)/vendor/nanorc/nanorc ${HOME}/.nanorc
-	@ln -s $(DOTFILES)/vendor/nanorc/ ${HOME}/.nano
+	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/nanorc ${HOME}/.nanorc
+	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/ ${HOME}/.nano
 
 clean-nano:
 	@rm -f ${HOME}/.nano

@@ -27,3 +27,9 @@
 	url = https://github.com/scopatz/nanorc.git
 	branch = master
 	ignore = dirty
+
+[submodule "vendor/nano-syntax-highlighting"]
+	path = vendor/nano-syntax-highlighting
+	url = https://github.com/galenguyer/nano-syntax-highlighting.git
+	branch = master
+	ignore = dirty
