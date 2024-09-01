@@ -1,7 +1,7 @@
 DOTFILES := $(shell pwd)
 
-all: submodule asdf git gnome ssh bash vim
-clean: clean-submodule clean-asdf clean-git clean-gnome clean-ssh clean-bash clean-vim
+all: submodule asdf git gnome ssh bash vim nano
+clean: clean-submodule clean-asdf clean-git clean-gnome clean-ssh clean-bash clean-vim clean-nano
 
 asdf/bin:
 	@git submodule update --init --recursive
@@ -74,3 +74,12 @@ vim:
 
 clean-vim:
 	@rm -f ${HOME}/.vimrc
+
+nano: clean-nano
+	@echo "nano"
+	@ln -s $(DOTFILES)/vendor/nanorc/nanorc ${HOME}/.nanorc
+	@ln -s $(DOTFILES)/vendor/nanorc/ ${HOME}/.nano
+
+clean-nano:
+	@rm -f ${HOME}/.nano
+	@rm -f ${HOME}/.nanorc

@@ -21,3 +21,9 @@
 	url = https://github.com/amix/vimrc.git
 	branch = master
 	ignore = dirty
+
+[submodule "vendor/nanorc"]
+	path = vendor/nanorc
+	url = https://github.com/scopatz/nanorc.git
+	branch = master
+	ignore = dirty
