@@ -12,7 +12,6 @@ Host *.acquia-sites.com
     #IdentitiesOnly yes # see NOTES below
     #AddKeysToAgent yes
 
-
 # BEGIN: Platform.sh certificate configuration
 Host *.platform.sh
   Include /home/rob/.platformsh/ssh/*.config
