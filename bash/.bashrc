@@ -5,7 +5,7 @@ case $- in
 esac
 
 # Path to your oh-my-bash installation.
-export OSH="$HOME/.dotfiles/oh-my-bash"
+export OSH="$HOME/.dotfiles/vendor/oh-my-bash"
 export PATH="$PATH:$HOME/.bin"
 export AG_NO_CONTEXT=false
 

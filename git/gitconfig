@@ -4,7 +4,7 @@
 	signingkey = BF759F3D663BE9DECDA2A773627C60834A74A21A
 
 [core]
-	excludesfile = ~/.gitconfig.core.excludesfile
+	excludesfile = ~/.dotfiles/git/gitconfig.core.excludesfile
 	autocrlf = false
 	safecrlf = false
 	ignorecase = false
@@ -35,7 +35,7 @@
 	st = status -sb
 
 [commit]
-	#template = ~/.gitconfig.commit.template
+	#template = ~/.dotfiles/git/.gitconfig.commit.template
 	gpgsign = true
 
 [help]
@@ -45,4 +45,4 @@
 	defaultBranch = master
 
 [include]
-	path = ~/.dotfiles/git/gitalias/gitalias.txt
+	path = ~/.dotfiles/vendor/gitalias/gitalias.txt
