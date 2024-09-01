@@ -11,12 +11,16 @@ status:
 
 # Push any changes up to the git repository
 push:
-	git add -A
-	git commit -m "Update"
-	git push git@github.com:RobLoach/dotfiles.git
+	@git add -A
+	@git commit -m "Update"
+	@git push git@github.com:RobLoach/dotfiles.git
+
+pull:
+	@git pull
+	@git status
 
 restart:
-	exec bash
+	@exec bash
 
 vendor/asdf/bin/asdf:
 	@git submodule update --init --recursive
