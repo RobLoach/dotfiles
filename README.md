@@ -39,11 +39,18 @@ make clean
 rm -rf ~/.dotfiles
 ```
 
+## Test
+
+To make sure all components are installed properly, use...
+```sh
+make test
+```
+
 ## Development
 
 Update all dependencies with...
 ```
-git submodule update --init --remote --recursive
+make update
 ```
 
 ## License
