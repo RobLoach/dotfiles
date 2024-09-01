@@ -44,12 +44,22 @@ asdf: bash submodules
 	-@asdf plugin add emsdk
 	-@asdf plugin add python
 	-@asdf plugin add golang
+	-@asdf plugin add c3 https://github.com/RobLoach/asdf-c3.git
 
 asdf-test:
 	@asdf version >/dev/null 2>&1 && echo "[x] asdf installed correctly" || echo "[ ] asdf not found"
 
 asdf-clean:
 	@rm -rf ${HOME}/.tool-versions
+
+deps: asdf
+	@echo "Installing Dependencies"
+	@asdf install
+	@asdf global nodejs latest
+	@asdf global golang latest
+	echo "asdf global c3 latest"
+	echo "asdf global php latest"
+	@asdf global python latest
 
 # ssh
 ${HOME}/.ssh:

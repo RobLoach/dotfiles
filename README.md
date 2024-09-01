@@ -11,7 +11,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 - [vimrc](https://github.com/amix/vimrc/) for the ultimate vim experience
 - Additional git configs and aliases
 - Cleanly managed through symlinks and this folder
-- Absolutely no guarantee that things works or won't break your system :thumbsup:
+- Absolutely no guarantees that things work or won't break your system :thumbsup:
 
 ## Dependencies
 
