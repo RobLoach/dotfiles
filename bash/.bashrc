@@ -166,10 +166,5 @@ export PATH="$HOME/.cargo/bin:$PATH";
 # Lando
 export PATH="$HOME/.lando/bin:$PATH"; #landopath
 
-# Direnv
-if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc" ]; then
-  source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
-fi
-
 # RetroArch
 export PATH="$HOME/Documents/RetroArch:$PATH";
