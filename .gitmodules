@@ -15,3 +15,9 @@
 	url = https://github.com/GitAlias/gitalias.git
 	branch = main
 	ignore = dirty
+
+[submodule "vendor/vimrc"]
+	path = vendor/vimrc
+	url = https://github.com/amix/vimrc.git
+	branch = master
+	ignore = dirty

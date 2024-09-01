@@ -1,7 +1,7 @@
 DOTFILES := $(shell pwd)
 
-all: submodule asdf git gnome ssh bash
-clean: clean-submodule clean-asdf clean-git clean-gnome clean-ssh clean-bash
+all: submodule asdf git gnome ssh bash vim
+clean: clean-submodule clean-asdf clean-git clean-gnome clean-ssh clean-bash clean-vim
 
 asdf/bin:
 	@git submodule update --init --recursive
@@ -61,4 +61,16 @@ bash:
 	@ln -fs $(DOTFILES)/bash/.bashrc ${HOME}/.bashrc
 clean-bash:
 	@rm ${HOME}/.bashrc
-	-@mv -f ${HOME}/.bashrc.backup ${HOME}.bashrc
+	-@mv -f ${HOME}/.bashrc.backup ${HOME}/.bashrc
+
+vim:
+	@echo "vim"
+	@rm -f ${HOME}/.vimrc
+	@echo "set runtimepath+=~/.dotfiles/vendor/vimrc" >> ${HOME}/.vimrc
+	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
+	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
+	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
+	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
+
+clean-vim:
+	@rm -f ${HOME}/.vimrc
