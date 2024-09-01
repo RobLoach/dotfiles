@@ -1,8 +1,11 @@
 DOTFILES := $(shell pwd)
 
-all: submodules bash git gnome ssh vim nano restart
+install: submodules bash git gnome ssh vim nano restart
 clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean
 test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test
+
+status:
+	${MAKE} test
 
 restart:
 	exec bash
@@ -39,10 +42,13 @@ asdf-clean:
 # ssh
 ${HOME}/.ssh:
 	mkdir -p ${HOME}/.ssh
+
 ${HOME}/.ssh/config: ${HOME}/.ssh
 	@ln -fs $(DOTFILES)/sshconfig/config ${HOME}/.ssh/config
+
 ssh: ${HOME}/.ssh/config
 	@echo "ssh"
+
 ssh-clean:
 	rm -f ${HOME}/.ssh/config
 
@@ -53,16 +59,20 @@ ssh-test:
 git: git-clean
 	@echo "git"
 	@ln -fs $(DOTFILES)/git/gitconfig ${HOME}/.gitconfig
+
 git-clean:
 	@rm -f ${HOME}/.gitconfig
+
 git-test:
 	@test ! -f ${HOME}/.gitconfig && echo "[ ] Git config not found" || echo "[x] Git config found"
 
 gnome: gnome-clean
 	@echo "Gnome"
 	@ln -fs $(DOTFILES)/gnome/face ${HOME}/.face
+
 gnome-clean:
 	@rm -f ${HOME}/.face
+
 gnome-test:
 	@test ! -f ${HOME}/.face && echo "[ ] Gnome face not found" || echo "[x] Gnome face found"
 
@@ -70,8 +80,10 @@ gnome-test:
 bash: bash-clean
 	@echo "bash"
 	@ln -fs $(DOTFILES)/bash/.bashrc ${HOME}/.bashrc
+
 bash-clean:
 	@rm -f ${HOME}/.bashrc
+
 bash-test:
 	@test ! -f ${HOME}/.bashrc && echo "[ ] Bash config not found" || echo "[x] Bash config found"
 

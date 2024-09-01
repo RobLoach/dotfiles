@@ -27,15 +27,13 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 
 2. Install the dotfiles by using [make](http://www.gnu.org/software/make/):
   ``` bash
-  cd ~/.dotfiles
-  make
+  make -C ~/.dotfiles
   ```
 
 ## Uninstall
 
 ``` bash
-cd ~/.dotfiles
-make clean
+make clean -C ~/.dotfiles
 rm -rf ~/.dotfiles
 ```
 
@@ -43,14 +41,14 @@ rm -rf ~/.dotfiles
 
 To make sure all components are installed properly, use...
 ```sh
-make test
+make test -C ~/.dotfiles
 ```
 
 ## Development
 
 Update all dependencies with...
 ```
-make update
+make update -C ~/.dotfiles
 ```
 
 ## License

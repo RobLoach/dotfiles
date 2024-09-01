@@ -4,6 +4,8 @@
 alias gti='git'
 alias gt='git'
 alias gi='git'
+alias maek='make'
+alias dotfiles='make -C ~/.dotfiles'
 
 # Path
 export PATH="$PATH:$HOME/.bin"

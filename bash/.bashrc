@@ -5,12 +5,13 @@ case $- in
 esac
 
 # Set the asdf directory
-export ASDF_DIR="$HOME/.dotfiles/vendor/asdf"
-export ASDF_DATA_DIR="$HOME/.dotfiles/bash/.asdf_data"
-export ASDF_CONFIG_FILE="$HOME/.dotfiles/bash/.asdfrc"
+export DOTFILES="$HOME/.dotfiles"
+export ASDF_DIR="$DOTFILES/vendor/asdf"
+export ASDF_DATA_DIR="$DOTFILES/bash/.asdf_data"
+export ASDF_CONFIG_FILE="$DOTFILES/bash/.asdfrc"
 
 # Path to your oh-my-bash installation.
-export OSH="$HOME/.dotfiles/vendor/oh-my-bash"
+export OSH="$DOTFILES/vendor/oh-my-bash"
 export AG_NO_CONTEXT=false
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -75,7 +76,7 @@ COMPLETION_WAITING_DOTS="true"
 # OMB_DEFAULT_ALIASES="check"
 
 # Would you like to use another custom folder than $OSH/custom?
-OSH_CUSTOM="$HOME/.dotfiles/bash/oh-my-bash-custom"
+OSH_CUSTOM="$DOTFILES/bash/oh-my-bash-custom"
 
 # To disable the uses of "sudo" by oh-my-bash, please set "false" to
 # this variable.  The default behavior for the empty value is "true".
