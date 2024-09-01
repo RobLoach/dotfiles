@@ -5,7 +5,7 @@
 	username = RobLoach
 
 [core]
-	excludesfile = ~/.dotfiles/git/gitconfig.core.excludesfile
+	excludesfile = ~/.dotfiles/.gitconfig.core.excludesfile
 	autocrlf = false
 	safecrlf = false
 	ignorecase = false
@@ -45,7 +45,7 @@
 	user = RobLoach
 
 [commit]
-	#template = ~/.dotfiles/git/.gitconfig.commit.template
+	#template = ~/.dotfiles/.gitconfig.commit.template
 	gpgsign = true
 
 [help]

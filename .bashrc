@@ -7,8 +7,8 @@ esac
 # Set the asdf directory
 export DOTFILES="$HOME/.dotfiles"
 export ASDF_DIR="$DOTFILES/vendor/asdf"
-export ASDF_DATA_DIR="$DOTFILES/bash/.asdf_data"
-export ASDF_CONFIG_FILE="$DOTFILES/bash/.asdfrc"
+export ASDF_DATA_DIR="$DOTFILES/.asdf_data"
+export ASDF_CONFIG_FILE="$DOTFILES/.asdf_data/.asdfrc"
 
 # Path to your oh-my-bash installation.
 export OSH="$DOTFILES/vendor/oh-my-bash"
@@ -76,7 +76,7 @@ COMPLETION_WAITING_DOTS="true"
 # OMB_DEFAULT_ALIASES="check"
 
 # Would you like to use another custom folder than $OSH/custom?
-OSH_CUSTOM="$DOTFILES/bash/oh-my-bash-custom"
+OSH_CUSTOM="$DOTFILES/.oh-my-bash-custom"
 
 # To disable the uses of "sudo" by oh-my-bash, please set "false" to
 # this variable.  The default behavior for the empty value is "true".

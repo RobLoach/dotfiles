@@ -61,16 +61,16 @@ deps: asdf
 
 # ssh
 ${HOME}/.ssh:
-	mkdir -p ${HOME}/.ssh
+	@mkdir -p ${HOME}/.ssh
 
 ${HOME}/.ssh/config: ${HOME}/.ssh
-	@ln -fs $(DOTFILES)/sshconfig/config ${HOME}/.ssh/config
+	@ln -fs $(DOTFILES)/.sshconfig ${HOME}/.ssh/config
 
-ssh: ${HOME}/.ssh/config
+ssh: ssh-clean ${HOME}/.ssh/config
 	@echo "ssh"
 
 ssh-clean:
-	rm -f ${HOME}/.ssh/config
+	@rm -f ${HOME}/.ssh/config
 
 ssh-test:
 	@test ! -f ${HOME}/.ssh/config && echo "[ ] SSH config not found" || echo "[x] SSH config found"
@@ -78,7 +78,7 @@ ssh-test:
 # git
 git: git-clean
 	@echo "git"
-	@ln -fs $(DOTFILES)/git/gitconfig ${HOME}/.gitconfig
+	@ln -fs $(DOTFILES)/.gitconfig ${HOME}/.gitconfig
 
 git-clean:
 	@rm -f ${HOME}/.gitconfig
@@ -88,7 +88,7 @@ git-test:
 
 gnome: gnome-clean
 	@echo "Gnome"
-	@ln -fs $(DOTFILES)/gnome/face ${HOME}/.face
+	@ln -fs $(DOTFILES)/.face ${HOME}/.face
 
 gnome-clean:
 	@rm -f ${HOME}/.face
@@ -99,7 +99,7 @@ gnome-test:
 # bash
 bash: bash-clean
 	@echo "bash"
-	@ln -fs $(DOTFILES)/bash/.bashrc ${HOME}/.bashrc
+	@ln -fs $(DOTFILES)/.bashrc ${HOME}/.bashrc
 
 bash-clean:
 	@rm -f ${HOME}/.bashrc

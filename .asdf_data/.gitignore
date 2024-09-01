@@ -1,3 +1,4 @@
 # asdf data directory
 *
 !.gitignore
+!.asdfrc
