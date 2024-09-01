@@ -1,31 +1,31 @@
 DOTFILES := $(shell pwd)
 
-all: submodule asdf git gnome ssh bash vim nano
-clean: clean-submodule clean-asdf clean-git clean-gnome clean-ssh clean-bash clean-vim clean-nano
+all: submodule bash asdf git gnome ssh vim nano asdf
+clean: clean-submodule clean-git clean-gnome clean-ssh clean-bash clean-vim clean-nano clean-asdf
 
-asdf/bin:
+vendor/asdf/bin/asdf:
 	@git submodule update --init --recursive
 
-submodule: asdf/bin
+submodule: vendor/asdf/bin/asdf
 	@echo "Submodules"
+
 clean-submodule:
 	@git submodule deinit -f .
 
-# asdf
-${HOME}/.asdf:
-	@ln -fs $(DOTFILES)/vendor/asdf ${HOME}/.asdf
-asdf: ${HOME}/.asdf asdf-plugins
-	@echo "asdf"
-clean-asdf:
-	@rm -f ${HOME}/.asdf
+update:
+	@echo "Updating Dependencies"
+	@git submodule update --init --remote --recursive
+	@git status
 
-asdf-plugins: ${HOME}/.asdf
-	-@. ~/.asdf/asdf.sh
+asdf:
 	-@asdf plugin add nodejs
 	-@asdf plugin add php
 	-@asdf plugin add emsdk
 	-@asdf plugin add python
 	-@asdf plugin add golang
+
+clean-asdf:
+	@rm -rf ${HOME}/.tool-versions
 
 # ssh
 ${HOME}/.ssh:
@@ -51,13 +51,12 @@ clean-gnome:
 	@rm -f ${HOME}/.face
 
 # bash
-bash:
+bash: clean-bash
 	@echo "bash"
-	-@mv -f ${HOME}/.bashrc ${HOME}.bashrc.backup
 	@ln -fs $(DOTFILES)/bash/.bashrc ${HOME}/.bashrc
+	exec bash
 clean-bash:
-	@rm ${HOME}/.bashrc
-	-@mv -f ${HOME}/.bashrc.backup ${HOME}/.bashrc
+	@rm -f ${HOME}/.bashrc
 
 vim:
 	@echo "vim"

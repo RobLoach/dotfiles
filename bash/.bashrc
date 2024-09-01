@@ -4,6 +4,11 @@ case $- in
     *) return;;
 esac
 
+# Set the asdf directory
+export ASDF_DIR="$HOME/.dotfiles/vendor/asdf"
+export ASDF_DATA_DIR="$HOME/.dotfiles/bash/.asdf_data"
+export ASDF_CONFIG_FILE="$HOME/.dotfiles/bash/asdfrc"
+
 # Path to your oh-my-bash installation.
 export OSH="$HOME/.dotfiles/vendor/oh-my-bash"
 export AG_NO_CONTEXT=false
