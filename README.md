@@ -6,11 +6,12 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 
 - [oh-my-bash](https://github.com/ohmybash/oh-my-bash) for a minimalist bash theme
 - [asdf-vm](https://asdf-vm.com/) for version management of development tools
-- [gitalias] commands for easier version control
+- [gitalias](https://github.com/GitAlias/gitalias) commands for easier version control
 - [nano syntax highlighting](https://github.com/galenguyer/nano-syntax-highlighting) for improved nano-ing
 - [vimrc](https://github.com/amix/vimrc/) for the ultimate vim experience
 - Additional git configs and aliases
-- Cleanly managed through symlinks and this one folder
+- Cleanly managed through symlinks and this folder
+- Absolutely no guarantee that things works or won't break your system :thumbsup:
 
 ## Dependencies
 

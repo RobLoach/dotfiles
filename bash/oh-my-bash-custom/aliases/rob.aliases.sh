@@ -11,3 +11,4 @@ alias dotfiles='make -C ${DOTFILES}'
 export PATH="$PATH:$HOME/.bin:$HOME/.local/bin";
 export PATH="$HOME/Documents/RetroArch:$PATH";
 export PATH="$HOME/.cargo/bin:$PATH";
+
