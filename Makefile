@@ -77,11 +77,11 @@ bash-test:
 
 vim: vim-clean submodules
 	@echo "vim"
-	@echo "set runtimepath+=~/.dotfiles/vendor/vimrc" >> ${HOME}/.vimrc
-	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
-	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
-	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
-	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
+	@echo "set runtimepath+=${DOTFILES}/vendor/vimrc" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
 
 vim-clean:
 	@rm -f ${HOME}/.vimrc

@@ -90,6 +90,7 @@ OMB_USE_SUDO=false
 # Example format: completions=(ssh git bundler gem pip pip3)
 # Add wisely, as too many completions slow down shell startup.
 completions=(
+  defaults
   git
   makefile
   asdf
