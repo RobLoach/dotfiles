@@ -1,13 +1,15 @@
 DOTFILES := $(shell pwd)
 
-all: submodule bash asdf git gnome ssh vim nano asdf
+all: submodule bash git gnome ssh vim nano restart
 clean: clean-submodule clean-git clean-gnome clean-ssh clean-bash clean-vim clean-nano clean-asdf
+
+restart:
+	exec bash
 
 vendor/asdf/bin/asdf:
 	@git submodule update --init --recursive
 
 submodule: vendor/asdf/bin/asdf
-	@echo "Submodules"
 
 clean-submodule:
 	@git submodule deinit -f .
@@ -17,7 +19,7 @@ update:
 	@git submodule update --init --remote --recursive
 	@git status
 
-asdf:
+asdf: bash submodule
 	-@asdf plugin add nodejs
 	-@asdf plugin add php
 	-@asdf plugin add emsdk
@@ -54,13 +56,11 @@ clean-gnome:
 bash: clean-bash
 	@echo "bash"
 	@ln -fs $(DOTFILES)/bash/.bashrc ${HOME}/.bashrc
-	exec bash
 clean-bash:
 	@rm -f ${HOME}/.bashrc
 
-vim:
+vim: clean-vim submodule
 	@echo "vim"
-	@rm -f ${HOME}/.vimrc
 	@echo "set runtimepath+=~/.dotfiles/vendor/vimrc" >> ${HOME}/.vimrc
 	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
 	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
@@ -70,7 +70,7 @@ vim:
 clean-vim:
 	@rm -f ${HOME}/.vimrc
 
-nano: clean-nano
+nano: clean-nano submodule
 	@echo "nano"
 	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/nanorc ${HOME}/.nanorc
 	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/ ${HOME}/.nano
