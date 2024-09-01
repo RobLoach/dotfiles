@@ -2,6 +2,7 @@
 	email = robloach@gmail.com
 	name = Rob Loach
 	signingkey = BF759F3D663BE9DECDA2A773627C60834A74A21A
+	username = RobLoach
 
 [core]
 	excludesfile = ~/.dotfiles/git/gitconfig.core.excludesfile
@@ -17,11 +18,41 @@
 	ui = auto
 	interactive = auto
 
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
 [pull]
     rebase = false
 
 [diff]
 	renames = copies
+
+[github]
+	user = RobLoach
+
+[commit]
+	#template = ~/.dotfiles/git/.gitconfig.commit.template
+	gpgsign = true
+
+[help]
+	autocorrect = 1
+
+[init]
+	defaultBranch = master
 
 [alias]
 	co = checkout
@@ -33,16 +64,6 @@
 	remotes = remote -v
 	last = log -1 HEAD --stat
 	st = status -sb
-
-[commit]
-	#template = ~/.dotfiles/git/.gitconfig.commit.template
-	gpgsign = true
-
-[help]
-	autocorrect = 1
-
-[init]
-	defaultBranch = master
 
 [include]
 	path = ~/.dotfiles/vendor/gitalias/gitalias.txt
