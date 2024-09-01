@@ -6,8 +6,11 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 
 - [oh-my-bash](https://github.com/ohmybash/oh-my-bash) for a minimalist bash theme
 - [asdf-vm](https://asdf-vm.com/) for version management of development tools
-- git configs, commit templates, and aliases
-- Managed through symlinks and this one folder
+- [gitalias] commands for easier version control
+- [nano syntax highlighting](https://github.com/galenguyer/nano-syntax-highlighting) for improved nano-ing
+- [vimrc](https://github.com/amix/vimrc/) for the ultimate vim experience
+- Additional git configs and aliases
+- Cleanly managed through symlinks and this one folder
 
 ## Dependencies
 
@@ -19,7 +22,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 
 1. Clone the repository into `~/.dotfiles`:
   ``` bash
-  git clone https://github.com/RobLoach/dotfiles.git ~/.dotfiles
+  git clone --recursive https://github.com/RobLoach/dotfiles.git ~/.dotfiles
   ```
 
 2. Install the dotfiles by using [make](http://www.gnu.org/software/make/):
@@ -34,6 +37,13 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 cd ~/.dotfiles
 make clean
 rm -rf ~/.dotfiles
+```
+
+## Development
+
+Update all dependencies with...
+```
+git submodule update --init --remote --recursive
 ```
 
 ## License
