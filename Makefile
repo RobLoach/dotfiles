@@ -4,8 +4,16 @@ install: submodules bash git gnome ssh vim nano restart
 clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean
 test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test
 
+# Display the current status of the dotfiles
 status:
 	${MAKE} test
+	git status
+
+# Push any changes up to the git repository
+push:
+	git add -A
+	git commit -m "Update"
+	git push git@github.com:RobLoach/dotfiles.git
 
 restart:
 	exec bash
