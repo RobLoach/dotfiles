@@ -13,7 +13,7 @@ status:
 push:
 	@git add -A
 	@git commit -m "Update"
-	@git push git@github.com:RobLoach/dotfiles.git
+	@git push git@github.com:RobLoach/dotfiles.git master
 
 pull:
 	@git pull
