@@ -1,7 +1,8 @@
 DOTFILES := $(shell pwd)
 
-all: submodule bash git gnome ssh vim nano restart
-clean: clean-submodule clean-git clean-gnome clean-ssh clean-bash clean-vim clean-nano clean-asdf
+all: submodules bash git gnome ssh vim nano restart
+clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean
+test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test
 
 restart:
 	exec bash
@@ -9,24 +10,30 @@ restart:
 vendor/asdf/bin/asdf:
 	@git submodule update --init --recursive
 
-submodule: vendor/asdf/bin/asdf
+submodules: vendor/asdf/bin/asdf
 
-clean-submodule:
+submodules-clean:
 	@git submodule deinit -f .
+
+submodules-test:
+	@test -f vendor/asdf/bin/asdf && echo "[x] Submodules found" || echo "[ ] Submodules not found"
 
 update:
 	@echo "Updating Dependencies"
 	@git submodule update --init --remote --recursive
 	@git status
 
-asdf: bash submodule
+asdf: bash submodules
 	-@asdf plugin add nodejs
 	-@asdf plugin add php
 	-@asdf plugin add emsdk
 	-@asdf plugin add python
 	-@asdf plugin add golang
 
-clean-asdf:
+asdf-test:
+	@asdf version >/dev/null 2>&1 && echo "[x] asdf installed correctly" || echo "[ ] asdf not found"
+
+asdf-clean:
 	@rm -rf ${HOME}/.tool-versions
 
 # ssh
@@ -36,30 +43,39 @@ ${HOME}/.ssh/config: ${HOME}/.ssh
 	@ln -fs $(DOTFILES)/sshconfig/config ${HOME}/.ssh/config
 ssh: ${HOME}/.ssh/config
 	@echo "ssh"
-clean-ssh:
+ssh-clean:
 	rm -f ${HOME}/.ssh/config
 
+ssh-test:
+	@test ! -f ${HOME}/.ssh/config && echo "[ ] SSH config not found" || echo "[x] SSH config found"
+
 # git
-git: clean-git
+git: git-clean
 	@echo "git"
 	@ln -fs $(DOTFILES)/git/gitconfig ${HOME}/.gitconfig
-clean-git:
+git-clean:
 	@rm -f ${HOME}/.gitconfig
+git-test:
+	@test ! -f ${HOME}/.gitconfig && echo "[ ] Git config not found" || echo "[x] Git config found"
 
-gnome: clean-gnome
+gnome: gnome-clean
 	@echo "Gnome"
 	@ln -fs $(DOTFILES)/gnome/face ${HOME}/.face
-clean-gnome:
+gnome-clean:
 	@rm -f ${HOME}/.face
+gnome-test:
+	@test ! -f ${HOME}/.face && echo "[ ] Gnome face not found" || echo "[x] Gnome face found"
 
 # bash
-bash: clean-bash
+bash: bash-clean
 	@echo "bash"
 	@ln -fs $(DOTFILES)/bash/.bashrc ${HOME}/.bashrc
-clean-bash:
+bash-clean:
 	@rm -f ${HOME}/.bashrc
+bash-test:
+	@test ! -f ${HOME}/.bashrc && echo "[ ] Bash config not found" || echo "[x] Bash config found"
 
-vim: clean-vim submodule
+vim: vim-clean submodules
 	@echo "vim"
 	@echo "set runtimepath+=~/.dotfiles/vendor/vimrc" >> ${HOME}/.vimrc
 	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
@@ -67,14 +83,21 @@ vim: clean-vim submodule
 	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
 	@echo "source ~/.dotfiles/vendor/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
 
-clean-vim:
+vim-clean:
 	@rm -f ${HOME}/.vimrc
 
-nano: clean-nano submodule
+vim-test:
+	@test ! -f ${HOME}/.vimrc && echo "[ ] Vim config not found" || echo "[x] Vim config found"
+
+nano: nano-clean submodules
 	@echo "nano"
 	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/nanorc ${HOME}/.nanorc
 	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/ ${HOME}/.nano
 
-clean-nano:
+nano-clean:
 	@rm -f ${HOME}/.nano
 	@rm -f ${HOME}/.nanorc
+
+nano-test:
+	@test ! -f ${HOME}/.nano/brainfuck.nanorc && echo "[ ] Nano config not found" || echo "[x] Nano config found"
+	@test ! -f ${HOME}/.nanorc && echo "[ ] Nano rc not found" || echo "[x] Nano rc found"
