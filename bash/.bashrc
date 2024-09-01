@@ -5,8 +5,7 @@ case $- in
 esac
 
 # Path to your oh-my-bash installation.
-export OSH="$HOME/.dotfiles/oh-my-bash"
-export PATH="$PATH:$HOME/.bin"
+export OSH="$HOME/.dotfiles/vendor/oh-my-bash"
 export AG_NO_CONTEXT=false
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -148,28 +147,3 @@ fi
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
-
-# Playdate SDK Setup
-# if [ -f "${XDG_CONFIG_HOME:-$HOME}/.asdf/plugins/playdate/setup.bash" ]; then
-#   source "${XDG_CONFIG_HOME:-$HOME}/.asdf/plugins/playdate/setup.bash"
-# fi
-
-# Local/bin
-export PATH="$HOME/.local/bin:$PATH";
-
-# RetroArch
-export PATH="$HOME/Documents/RetroArch:$PATH";
-
-# Rust/Cargo
-export PATH="$HOME/.cargo/bin:$PATH";
-
-# Lando
-export PATH="$HOME/.lando/bin:$PATH"; #landopath
-
-# Direnv
-if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc" ]; then
-  source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
-fi
-
-# RetroArch
-export PATH="$HOME/Documents/RetroArch:$PATH";

@@ -13,7 +13,7 @@ clean-submodule:
 
 # asdf
 ${HOME}/.asdf:
-	@ln -fs $(DOTFILES)/asdf ${HOME}/.asdf
+	@ln -fs $(DOTFILES)/vendor/asdf ${HOME}/.asdf
 asdf: ${HOME}/.asdf asdf-plugins
 	@echo "asdf"
 clean-asdf:
@@ -41,12 +41,8 @@ clean-ssh:
 git: clean-git
 	@echo "git"
 	@ln -fs $(DOTFILES)/git/gitconfig ${HOME}/.gitconfig
-	@ln -fs $(DOTFILES)/git/gitconfig.commit.template ${HOME}/.gitconfig.commit.template
-	@ln -fs $(DOTFILES)/git/gitconfig.core.excludesfile ${HOME}/.gitconfig.core.excludesfile
 clean-git:
 	@rm -f ${HOME}/.gitconfig
-	@rm -f ${HOME}/.gitconfig.commit.template
-	@rm -f ${HOME}/.gitconfig.core.excludesfile
 
 gnome: clean-gnome
 	@echo "Gnome"
