@@ -42,7 +42,6 @@ asdf: bash submodules
 	-@asdf plugin add nodejs
 	-@asdf plugin add php
 	-@asdf plugin add emsdk
-	-@asdf plugin add python
 	-@asdf plugin add golang
 	-@asdf plugin add c3 https://github.com/RobLoach/asdf-c3.git
 
@@ -59,7 +58,6 @@ deps: asdf
 	@asdf global golang latest
 	echo "asdf global c3 latest"
 	echo "asdf global php latest"
-	@asdf global python latest
 
 # ssh
 ${HOME}/.ssh:
