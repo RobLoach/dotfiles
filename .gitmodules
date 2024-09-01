@@ -21,3 +21,9 @@
 	url = https://github.com/amix/vimrc.git
 	branch = master
 	ignore = dirty
+
+[submodule "vendor/nano-syntax-highlighting"]
+	path = vendor/nano-syntax-highlighting
+	url = https://github.com/galenguyer/nano-syntax-highlighting.git
+	branch = master
+	ignore = dirty
