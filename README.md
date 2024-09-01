@@ -1,11 +1,13 @@
 # Rob Loach's Dotfiles
 
-Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the deployment of complete development environments.
+Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel free to use them yourself.
 
 ## Features
 
+- [oh-my-bash](https://github.com/ohmybash/oh-my-bash) for a minimalist bash theme
 - [asdf-vm](https://asdf-vm.com/) for version management of development tools
 - git configs, commit templates, and aliases
+- Managed through symlinks and this one folder
 
 ## Dependencies
 
@@ -15,7 +17,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the depl
 
 ## Installation
 
-1. Check out the repository into `~/.dotfiles`:
+1. Clone the repository into `~/.dotfiles`:
   ``` bash
   git clone https://github.com/RobLoach/dotfiles.git ~/.dotfiles
   ```
@@ -31,10 +33,9 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). This aims to ease the depl
 ``` bash
 cd ~/.dotfiles
 make clean
+rm -rf ~/.dotfiles
 ```
 
 ## License
 
-Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT license](http://creativecommons.org/licenses/MIT/)
-
-Copyright &copy; Rob Loach (http://robloach.net)
+Licensed under the [zlib license](LICENSE). Copyright &copy; Rob Loach (https://robloach.net).
