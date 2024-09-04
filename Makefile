@@ -133,3 +133,11 @@ nano-clean:
 nano-test:
 	@test ! -f ${HOME}/.nano/brainfuck.nanorc && echo "[ ] Nano config not found" || echo "[x] Nano config found"
 	@test ! -f ${HOME}/.nanorc && echo "[ ] Nano rc not found" || echo "[x] Nano rc found"
+
+# Console colors for gnome-terminal: https://github.com/Gogh-Co/Gogh
+gogh:
+	GOGH_APPLY_SCRIPT=$(DOTFILES)/vendor/gogh/apply-colors.sh \
+	GOGH_ALACRITTY_SCRIPT=$(DOTFILES)/vendor/gogh/apply-alacritty.py \
+	GOGH_TERMINATOR_SCRIPT=$(DOTFILES)/vendor/gogh/apply-terminator.py \
+	TERMINAL=gnome-terminal \
+	bash $(DOTFILES)/vendor/gogh/installs/dracula.sh

@@ -9,6 +9,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 - [gitalias](https://github.com/GitAlias/gitalias) commands for easier version control
 - [nano syntax highlighting](https://github.com/galenguyer/nano-syntax-highlighting) for improved nano-ing
 - [vimrc](https://github.com/amix/vimrc/) for the ultimate vim experience
+- [Gogh](https://github.com/Gogh-Co/Gogh?tab=readme-ov-file#--gogh) for consistent terminal emulator color schemes
 - Additional git configs and aliases
 - Cleanly managed through symlinks and this folder
 - Absolutely no guarantees that things work or won't break your system :thumbsup:
