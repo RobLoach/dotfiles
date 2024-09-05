@@ -12,7 +12,7 @@ if [[ $PS1 ]]; then
 	}
 
 	# Custom BASH_COMPLETION_DIR
-	if [[ ${BASH_COMPLETION_DIR+set} ]]; then
+	if [[ -f ${BASH_COMPLETION_DIR}/bash_completion ]]; then
 		. ${BASH_COMPLETION_DIR}/bash_completion
 	# Config directory
 	elif [[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/bash_completion/bash_completion" ]]; then
