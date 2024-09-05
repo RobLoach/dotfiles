@@ -30,3 +30,6 @@
 [submodule "vendor/gogh"]
 	path = vendor/gogh
 	url = https://github.com/Gogh-Co/Gogh.git
+[submodule "vendor/bash-completion"]
+	path = vendor/bash-completion
+	url = https://github.com/scop/bash-completion.git
