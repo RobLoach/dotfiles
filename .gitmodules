@@ -27,9 +27,15 @@
 	url = https://github.com/galenguyer/nano-syntax-highlighting.git
 	branch = master
 	ignore = dirty
+
 [submodule "vendor/gogh"]
 	path = vendor/gogh
 	url = https://github.com/Gogh-Co/Gogh.git
+	branch = master
+	ignore = dirty
+
 [submodule "vendor/bash-completion"]
 	path = vendor/bash-completion
 	url = https://github.com/scop/bash-completion.git
+	branch = main
+	ignore = dirty
