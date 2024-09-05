@@ -1,4 +1,4 @@
-# Rob Loach's Dotfiles
+# RobLoach's Dotfiles
 
 Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel free to use them yourself.
 
@@ -10,9 +10,10 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 - [nano syntax highlighting](https://github.com/galenguyer/nano-syntax-highlighting) for improved nano-ing
 - [vimrc](https://github.com/amix/vimrc/) for the ultimate vim experience
 - [Gogh](https://github.com/Gogh-Co/Gogh?tab=readme-ov-file#--gogh) for consistent terminal emulator color schemes
+- [bash-completion](https://github.com/scop/bash-completion) for a set of completions for shell applications
 - Additional git configs and aliases
-- Cleanly managed through symlinks and this folder
-- Absolutely no guarantees that things work or won't break your system :thumbsup:
+- Cleanly managed through symlinks and `make`
+- Absolutely no guarantees that things work or won't break your system :astronaut:
 
 ## Dependencies
 
