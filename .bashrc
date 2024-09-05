@@ -10,6 +10,7 @@ export ASDF_DIR="$DOTFILES/vendor/asdf"
 export ASDF_DATA_DIR="$DOTFILES/.asdf_data"
 export ASDF_CONFIG_FILE="$DOTFILES/.asdf_data/.asdfrc"
 export BASH_COMPLETION_DIR="$DOTFILES/vendor/bash-completion"
+export BLESH_DIR="$DOTFILES/vendor/blesh"
 
 # Path to your oh-my-bash installation.
 export OSH="$DOTFILES/vendor/oh-my-bash"
@@ -117,6 +118,7 @@ plugins=(
   rob
   git
   asdf
+  blesh
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)

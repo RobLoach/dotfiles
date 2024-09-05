@@ -39,3 +39,9 @@
 	url = https://github.com/scop/bash-completion.git
 	branch = main
 	ignore = dirty
+
+[submodule "vendor/blesh"]
+	path = vendor/blesh
+	url = https://github.com/akinomyoga/ble.sh.git
+	branch = master
+	ignore = dirty

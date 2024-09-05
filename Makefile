@@ -1,6 +1,6 @@
 DOTFILES := $(shell pwd)
 
-install: submodules bash git gnome ssh vim nano restart
+install: submodules bash git gnome ssh vim nano blesh restart
 clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean
 test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test
 
@@ -141,3 +141,6 @@ gogh:
 	GOGH_TERMINATOR_SCRIPT=$(DOTFILES)/vendor/gogh/apply-terminator.py \
 	TERMINAL=gnome-terminal \
 	bash $(DOTFILES)/vendor/gogh/installs/dracula.sh
+
+blesh:
+	make -C $(DOTFILES)/vendor/blesh
