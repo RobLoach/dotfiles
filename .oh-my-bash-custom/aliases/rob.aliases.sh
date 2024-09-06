@@ -4,6 +4,7 @@
 alias gti='git'
 alias gt='git'
 alias gi='git'
+alias oirgin='origin'
 
 # Text editor
 alias pluma='xed'
