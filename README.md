@@ -11,6 +11,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 - [vimrc](https://github.com/amix/vimrc/) for the ultimate vim experience
 - [Gogh](https://github.com/Gogh-Co/Gogh?tab=readme-ov-file#--gogh) for consistent terminal emulator color schemes
 - [bash-completion](https://github.com/scop/bash-completion) for a set of completions for shell applications
+- [ble.sh](https://github.com/akinomyoga/ble.sh) for an interactive line editing
 - Additional git configs and aliases
 - Cleanly managed through symlinks and `make`
 - Absolutely no guarantees that things work or won't break your system :astronaut:

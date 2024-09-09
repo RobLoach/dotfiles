@@ -1,8 +1,8 @@
 DOTFILES := $(shell pwd)
 
-install: submodules bash git gnome ssh vim nano restart
+install: submodules bash git gnome ssh vim nano blesh restart
 clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean
-test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test
+test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test blesh-test
 
 # Display the current status of the dotfiles
 status:
@@ -119,7 +119,7 @@ vim-clean:
 	@rm -f ${HOME}/.vimrc
 
 vim-test:
-	@test ! -f ${HOME}/.vimrc && echo "[ ] Vim config not found" || echo "[x] Vim config found"
+	@test ! -f ${HOME}/.vimrc && echo "[ ] Vim config" || echo "[x] Vim config"
 
 nano: nano-clean submodules
 	@echo "nano"
@@ -131,13 +131,19 @@ nano-clean:
 	@rm -f ${HOME}/.nanorc
 
 nano-test:
-	@test ! -f ${HOME}/.nano/brainfuck.nanorc && echo "[ ] Nano config not found" || echo "[x] Nano config found"
-	@test ! -f ${HOME}/.nanorc && echo "[ ] Nano rc not found" || echo "[x] Nano rc found"
+	@test ! -f ${HOME}/.nano/brainfuck.nanorc && echo "[ ] Nano config" || echo "[x] Nano config"
+	@test ! -f ${HOME}/.nanorc && echo "[ ] Nano rc" || echo "[x] Nano rc"
 
 # Console colors for gnome-terminal: https://github.com/Gogh-Co/Gogh
-gogh:
+gogh: submodules
 	GOGH_APPLY_SCRIPT=$(DOTFILES)/vendor/gogh/apply-colors.sh \
 	GOGH_ALACRITTY_SCRIPT=$(DOTFILES)/vendor/gogh/apply-alacritty.py \
 	GOGH_TERMINATOR_SCRIPT=$(DOTFILES)/vendor/gogh/apply-terminator.py \
 	TERMINAL=gnome-terminal \
 	bash $(DOTFILES)/vendor/gogh/installs/dracula.sh
+
+blesh: submodules
+	make -C $(DOTFILES)/vendor/blesh
+
+blesh-test:
+	@test ! -f$(DOTFILES)/vendor/blesh/out/ble.sh && echo "[ ] ble.sh -- Run `dotfiles blesh`" || echo "[x] ble.sh"
