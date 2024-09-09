@@ -1,0 +1,169 @@
+# Readline Variables
+# https://www.man7.org/linux/man-pages/man1/bash.1.html
+
+# Load default bindings
+$include /etc/inputrc
+
+# If set to On, readline uses an internal more-like pager to display a screenful of possible completions at a time.
+set page-completions off
+
+# If set to On, readline will display completions with matches sorted horizontally in alphabetical order, rather than down the screen.
+set print-completions-horizontally on
+
+# If set to On, completed names which are symbolic links to directories have a slash appended (subject to the value of mark-directories).
+set mark-symlinked-directories On
+
+# Controls whether readline begins with a set of key bindings similar to emacs or vi.
+set editing-mode emacs
+
+# If set to On, readline attempts to bind the control characters treated specially by the kernel's terminal driver to their readline equivalents
+set bind-tty-special-chars on
+
+# If set to On, readline attempts to briefly move the cursor to an opening parenthesis when a closing parenthesis is inserted.
+set blink-matching-paren off
+
+# If set to On, a character denoting a file's type as reported by stat is appended to the filename when listing possible completions.
+set visible-stats on
+
+# Controls what happens when readline wants to ring the terminal bell. If set to none, readline never rings the bell. If set to visible, readline uses a visible bell if one is available.  If set to audible, readline attempts to ring the terminal's bell.
+set bell-style none
+
+# If set to On, history lines that have been modified are displayed with a preceding asterisk (*).
+set mark-modified-lines on
+
+# Filetype colors in completion lists
+set colored-stats on
+
+# Case-insensitive filesystems be damned
+set completion-ignore-case on
+
+# Hyphen can be used to complete underscores
+set completion-map-case on
+
+# With multiple matches, only show the remaining part.
+set completion-prefix-display-length 2
+
+# Try to avoid accidental multi-line pastes being interpreted as commands
+set enable-bracketed-paste off
+
+# Completion when in middle of word doesn't duplicate existing input. Like many useful GNU things, seems unsupported in editline.
+set skip-completed-text on
+
+# If there are more than 200 possible completions for a word, ask to show them all
+set completion-query-items 200
+
+# Don't mutate history entries, leaving things you never executed
+set revert-all-at-newline off
+
+# When set to On, on operating systems that indicate they support it, readline echoes a character corresponding to a signal generated from the keyboard.
+set echo-control-characters off
+
+# This alters the default behavior of the completion functions.  If set to On, words which have more than one possible completion cause the matches to be listed immediately instead of ringing the bell.
+set show-all-if-ambiguous on
+
+# This alters the default behavior of the completion functions in a fashion similar to show-all-if-ambiguous. If set to On, words which have more than one possible completion without any possible partial completion (the possible completions don't share a common prefix) cause the matches to be listed immediately instead of ringing the bell.
+set show-all-if-unmodified on
+
+# Allow UTF-8 input and output, instead of showing stuff like $'\0123\0456'
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# If set to On, when listing completions, readline displays the common prefix of the set of possible completions using a different color.  The color definitions are taken from the value of the LS_COLORS environment variable.  If there is a color definition in $LS_COLORS for the custom suffix "readline-colored-completion-prefix", readline uses this color for the common prefix instead of its default.
+set colored-completion-prefix on
+
+# If set to On, menu completion displays the common prefix of the list of possible completions (which may be empty) before cycling through the list.
+set menu-complete-display-prefix on
+
+# Use Home/End keyboard keys to navigate current line (same as CTRL+A or E), listing all variants for those keys here
+"\e[1~": beginning-of-line          # Home
+"\e[H": beginning-of-line           # Home
+"\eOH": beginning-of-line           # Home
+"\0001": beginning-of-line          # Home
+"\e[4~": end-of-line                # End
+"\e[F": end-of-line                 # End
+"\eOF": end-of-line                 # End
+"\0005": end-of-line                # End
+
+# CTRL+DEL to delete from cursor to end of line
+"\e[2~": quoted-insert              # INS
+"\e[3~": delete-char                # DEL
+"\e[3;4~": kill-line                # CTRL+DEL
+"\e[3;5~": shell-kill-word
+
+# Ctrl-Backspace
+"\0177": backward-kill-line
+"\C-H": shell-backward-kill-word
+
+# CTRL+arrows to move from word to word
+"\e[5D": backward-word              # CTRL+left
+"\e[1;4D": backward-word            # CTRL+left
+"\e[1;5D": backward-word            # CTRL+left
+"\eOD": backward-word               # CTRL+left
+"\e[5C": forward-word               # CTRL+right
+"\e[1;4C": forward-word             # CTRL+right
+"\e[1;5C": forward-word             # CTRL+right
+"\eOC": forward-word                # CTRL+right
+
+# These are usually defaults:
+#"\e[A": history-search-backward    # search command history backward with up arrow key
+#"\e[B": history-search-forward     # search command history forward with down arrow key
+#"\e[D": backward-char              # left
+#"\e[C": forward-char               # right
+
+# Tab: through completions
+"\t": menu-complete
+# Shift-Tab: Cycle back through completions
+"\e[Z": menu-complete-backward
+
+$if Bash                            # same effect as "bind Space:magic-space" in ~/.bashrc
+  Space: magic-space
+$endif
+
+"\C-x\C-r": re-read-init-file
+
+# Default Ctrl-w to stop at punctuation
+"\C-w": unix-filename-rubout
+"\C-x\C-w": unix-word-rubout
+
+# Ctrl-p/n will use history search for what's typed so far.
+# Up/Down still cycle dumbly. (previous-history / next-history)
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+# Need to kill -9 a thing that didn't die? Grep directory when you forgot -r?
+# Hat tip: http://www.ukuug.org/events/linux2003/papers/bash_tips/
+"\eo": "\C-p\C-a\ef "
+
+# Using Esc-i as a prefix that's more comfortable to me than the commonly used
+# Ctrl-x (on qwerty with left Option as Esc in iTerm). Other Ctrl combinations
+# have useful or unusable bindings. (mnemonic: "input")
+
+# Pairs; C-v (quoted-insert) avoids recursion when auto-pairs are in effect
+"\ei\"": "\C-v\"\C-v\"\C-b"
+"\ei\'": "\C-v\'\C-v\'\C-b"
+"\ei(": "\C-v()\C-b"
+"\ei9": "\ei("
+# Quote current or previous word
+"\eiq": "\eb\C-v\"\ef\C-v\""
+
+$if Bash
+    # Alias for C-xC-e that matches fish
+    "\ee": edit-and-execute-command
+    # Append pager, fish-inspired
+    "\ep": "\C-e | less"
+
+    # Auto-pairs -- let's try if this is more convenient than annoying...
+    "\"": "\C-v\"\C-v\"\C-b"
+    "\'": "\C-v\'\C-v\'\C-b"
+    "(": "\C-v()\C-b"
+    # Surround current line with $()
+    "\ei$": "\C-a$\C-v(\C-e)"
+$endif
+
+# Call method in IRB. See .irbrc
+$if Ruby
+    "\C-x\C-p": "toggle_object_complete\n"
+    "\C-x\C-h": "Hirb::View.toggle_formatter\n"
+    "\C-x\C-l": "toggle_db_logging\n"
+$endif
