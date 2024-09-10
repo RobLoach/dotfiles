@@ -10,6 +10,7 @@
 	safecrlf = false
 	ignorecase = false
 	longpaths = true
+	editor = nano
 
 [color]
 	diff = auto
