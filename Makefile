@@ -147,7 +147,6 @@ gogh:
 	TERMINAL=gnome-terminal \
 	bash $(DOTFILES)/vendor/gogh/installs/dracula.sh
 
-# bash
 inputrc: inputrc-clean
 	@echo "inputrc"
 	@ln -fs $(DOTFILES)/.inputrc ${HOME}/.inputrc
