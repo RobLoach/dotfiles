@@ -123,15 +123,13 @@ vim-test:
 
 nano: nano-clean submodules
 	@echo "nano"
-	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/nanorc ${HOME}/.nanorc
-	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/ ${HOME}/.nano
+	@cat ${DOTFILES}/.nanorc > ${HOME}/.nanorc
+	@echo "include \"${DOTFILES}/vendor/nano-syntax-highlighting/*.nanorc\"" >> ${HOME}/.nanorc
 
 nano-clean:
-	@rm -f ${HOME}/.nano
 	@rm -f ${HOME}/.nanorc
 
 nano-test:
-	@test ! -f ${HOME}/.nano/brainfuck.nanorc && echo "[ ] Nano config not found" || echo "[x] Nano config found"
 	@test ! -f ${HOME}/.nanorc && echo "[ ] Nano rc not found" || echo "[x] Nano rc found"
 
 # Console colors for gnome-terminal: https://github.com/Gogh-Co/Gogh
