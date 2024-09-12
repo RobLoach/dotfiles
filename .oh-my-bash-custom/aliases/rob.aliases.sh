@@ -12,6 +12,9 @@ alias pluma='xed'
 # make
 alias maek='make'
 
+# composer
+alias copmoser='composer'
+
 # dotfiles
 alias dotfiles='make -C ${DOTFILES}'
 
