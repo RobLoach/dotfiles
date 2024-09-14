@@ -12,6 +12,8 @@ alias pluma='xed'
 # make
 alias maek='make'
 
+alias mdkir='mkdir'
+
 # composer
 alias copmoser='composer'
 
