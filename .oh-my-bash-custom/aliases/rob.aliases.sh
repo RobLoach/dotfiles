@@ -16,6 +16,7 @@ alias mdkir='mkdir'
 
 # composer
 alias copmoser='composer'
+alias instlal='install'
 
 # dotfiles
 alias dotfiles='make -C ${DOTFILES}'
