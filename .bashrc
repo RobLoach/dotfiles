@@ -141,8 +141,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nano'
 fi
-
-export VISUAL='code'
+#export VISUAL='code'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
