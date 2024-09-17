@@ -1,8 +1,13 @@
 DOTFILES := $(shell pwd)
 
-install: submodules bash git gnome ssh vim nano restart
-clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean
-test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test
+# Install all the dotfiles
+install: submodules bash git gnome ssh vim nano inputrc
+
+# Remove any of the dotfiles from the system
+clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean
+
+# Test to make sure the dotfiles were set up correctly
+test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test
 
 # Display the current status of the dotfiles
 status:
@@ -123,15 +128,13 @@ vim-test:
 
 nano: nano-clean submodules
 	@echo "nano"
-	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/nanorc ${HOME}/.nanorc
-	@ln -s $(DOTFILES)/vendor/nano-syntax-highlighting/ ${HOME}/.nano
+	@cat ${DOTFILES}/.nanorc > ${HOME}/.nanorc
+	@echo "include \"${DOTFILES}/vendor/nano-syntax-highlighting/*.nanorc\"" >> ${HOME}/.nanorc
 
 nano-clean:
-	@rm -f ${HOME}/.nano
 	@rm -f ${HOME}/.nanorc
 
 nano-test:
-	@test ! -f ${HOME}/.nano/brainfuck.nanorc && echo "[ ] Nano config not found" || echo "[x] Nano config found"
 	@test ! -f ${HOME}/.nanorc && echo "[ ] Nano rc not found" || echo "[x] Nano rc found"
 
 # Console colors for gnome-terminal: https://github.com/Gogh-Co/Gogh
@@ -141,3 +144,13 @@ gogh:
 	GOGH_TERMINATOR_SCRIPT=$(DOTFILES)/vendor/gogh/apply-terminator.py \
 	TERMINAL=gnome-terminal \
 	bash $(DOTFILES)/vendor/gogh/installs/dracula.sh
+
+inputrc: inputrc-clean
+	@echo "inputrc"
+	@ln -fs $(DOTFILES)/.inputrc ${HOME}/.inputrc
+
+inputrc-clean:
+	@rm -f ${HOME}/.inputrc
+
+inputrc-test:
+	@test ! -f ${HOME}/.inputrc && echo "[ ] inputrc not found" || echo "[x] inputrc found"
