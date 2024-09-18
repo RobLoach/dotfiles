@@ -39,3 +39,6 @@
 	url = https://github.com/scop/bash-completion.git
 	branch = main
 	ignore = dirty
+[submodule "vendor/base16-vim"]
+	path = vendor/base16-vim
+	url = https://github.com/tinted-theming/base16-vim.git
