@@ -8,6 +8,7 @@ alias oirgin='origin'
 
 # Text editor
 alias pluma='xed'
+alias 'code.'='code .'
 
 # make
 alias maek='make'
