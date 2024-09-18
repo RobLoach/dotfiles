@@ -9,10 +9,14 @@ alias oirgin='origin'
 # Text editor
 alias pluma='xed'
 alias 'code.'='code .'
+if command -v vim &> /dev/null; then
+    alias vi='vim'
+fi
 
 # make
 alias maek='make'
 
+# mkdir
 alias mdkir='mkdir'
 
 # composer
