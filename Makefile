@@ -119,6 +119,8 @@ vim: vim-clean submodules
 	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/vendor/base16-vim/colors/base16-dracula.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/.vimrc-extras.vim" >> ${HOME}/.vimrc
 
 vim-clean:
 	@rm -f ${HOME}/.vimrc
