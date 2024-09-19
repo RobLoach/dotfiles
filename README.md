@@ -6,12 +6,12 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 
 - [oh-my-bash](https://github.com/ohmybash/oh-my-bash) for a minimalist bash theme
 - [asdf-vm](https://asdf-vm.com/) for version management of development tools
-- [gitalias](https://github.com/GitAlias/gitalias) commands for easier version control
 - [nano syntax highlighting](https://github.com/galenguyer/nano-syntax-highlighting) for improved nano-ing
 - [vimrc](https://github.com/amix/vimrc/) for the ultimate vim experience
 - [Gogh](https://github.com/Gogh-Co/Gogh?tab=readme-ov-file#--gogh) for consistent terminal emulator color schemes
 - [bash-completion](https://github.com/scop/bash-completion) for a set of completions for shell applications
-- Additional git configs and aliases
+- [Dracula Theme](https://draculatheme.com/) wherever possible
+- [gitalias](https://github.com/GitAlias/gitalias) commands for easier version control
 - Cleanly managed through symlinks and `make`
 - Absolutely no guarantees that things work or won't break your system :astronaut:
 
