@@ -4,6 +4,8 @@
 alias gti='git'
 alias gt='git'
 alias gi='git'
+alias giut='git'
+alias guit='git'
 alias oirgin='origin'
 
 # Text editor
