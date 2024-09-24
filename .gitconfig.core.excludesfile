@@ -23,3 +23,14 @@ Session.vim
 
 # Editors
 .vscode
+
+# Mac
+.DS_Store
+Thumbs.db
+
+# Development
+*.o
+*.pyc
+*.class
+.tmp
+.idea
