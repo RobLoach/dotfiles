@@ -22,6 +22,7 @@ alias maek='make'
 alias mdkir='mkdir'
 
 # composer
+alias comopser='composer'
 alias copmoser='composer'
 alias instlal='install'
 
