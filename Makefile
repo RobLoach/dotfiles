@@ -1,13 +1,29 @@
 DOTFILES := $(shell pwd)
 
 # Install all the dotfiles
-install: submodules bash git gnome ssh vim nano inputrc
+install: welcome install-start submodules bash git gnome ssh vim nano inputrc test
+	@echo ""
+	@echo "Installation complete. Run 'make deps' to install dependencies."
+	@echo ""
 
 # Remove any of the dotfiles from the system
 clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean
 
 # Test to make sure the dotfiles were set up correctly
 test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test
+
+welcome:
+	@echo "Welcome to RobLoach/dotfiles!"
+	@echo ""
+	@echo "    make install: Install the dotfiles"
+	@echo "    make test: Ensure everything was installed correctly"
+	@echo "    make clean: Uninstall the dotfiles from the system"
+	@echo "    make gogh: Installs the terminal color scheme"
+	@echo "    make deps: Install tool dependencies with asdf"
+	@echo ""
+
+install-start:
+	@echo "Installing dotfiles..."
 
 # Display the current status of the dotfiles
 status:
@@ -36,7 +52,7 @@ submodules-clean:
 	@git submodule deinit -f .
 
 submodules-test:
-	@test -f vendor/asdf/bin/asdf && echo "[x] Submodules found" || echo "[ ] Submodules not found"
+	@test -f vendor/asdf/bin/asdf && echo "[x] Submodules" || echo "[ ] Submodules not found"
 
 update:
 	@echo "Updating Dependencies"
@@ -60,62 +76,53 @@ asdf-clean:
 deps: asdf
 	@echo "Installing Dependencies"
 	@asdf install
-	@asdf global nodejs latest
-	echo "asdf global golang latest"
-	echo "asdf global zig latest"
-	echo "asdf global c3 latest"
-	echo "asdf global php latest"
+	@asdf global nodejs 22.7.0
+	@echo "asdf global golang 1.23.0"
+	@echo "asdf global zig 0.13.0"
+	@echo "asdf global c3 0.6.2"
+	@echo "asdf global php 8.3.9"
 
 # ssh
-${HOME}/.ssh:
+ssh: ssh-clean
 	@mkdir -p ${HOME}/.ssh
-
-${HOME}/.ssh/config: ${HOME}/.ssh
 	@ln -fs $(DOTFILES)/.sshconfig ${HOME}/.ssh/config
-
-ssh: ssh-clean ${HOME}/.ssh/config
-	@echo "ssh"
 
 ssh-clean:
 	@rm -f ${HOME}/.ssh/config
 
 ssh-test:
-	@test ! -f ${HOME}/.ssh/config && echo "[ ] SSH config not found" || echo "[x] SSH config found"
+	@test ! -f ${HOME}/.ssh/config && echo "[ ] SSH config not found" || echo "[x] SSH config"
 
 # git
 git: git-clean
-	@echo "git"
 	@ln -fs $(DOTFILES)/.gitconfig ${HOME}/.gitconfig
 
 git-clean:
 	@rm -f ${HOME}/.gitconfig
 
 git-test:
-	@test ! -f ${HOME}/.gitconfig && echo "[ ] Git config not found" || echo "[x] Git config found"
+	@test ! -f ${HOME}/.gitconfig && echo "[ ] Git config not found" || echo "[x] Git config"
 
 gnome: gnome-clean
-	@echo "Gnome"
 	@ln -fs $(DOTFILES)/.face ${HOME}/.face
 
 gnome-clean:
 	@rm -f ${HOME}/.face
 
 gnome-test:
-	@test ! -f ${HOME}/.face && echo "[ ] Gnome face not found" || echo "[x] Gnome face found"
+	@test ! -f ${HOME}/.face && echo "[ ] Gnome face not found" || echo "[x] Gnome face"
 
 # bash
 bash: bash-clean
-	@echo "bash"
 	@ln -fs $(DOTFILES)/.bashrc ${HOME}/.bashrc
 
 bash-clean:
 	@rm -f ${HOME}/.bashrc
 
 bash-test:
-	@test ! -f ${HOME}/.bashrc && echo "[ ] Bash config not found" || echo "[x] Bash config found"
+	@test ! -f ${HOME}/.bashrc && echo "[ ] Bash config not found" || echo "[x] Bash config"
 
 vim: vim-clean submodules
-	@echo "vim"
 	@echo "set runtimepath+=${DOTFILES}/vendor/vimrc" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
@@ -128,10 +135,9 @@ vim-clean:
 	@rm -f ${HOME}/.vimrc
 
 vim-test:
-	@test ! -f ${HOME}/.vimrc && echo "[ ] Vim config not found" || echo "[x] Vim config found"
+	@test ! -f ${HOME}/.vimrc && echo "[ ] Vim config not found" || echo "[x] Vim config"
 
 nano: nano-clean submodules
-	@echo "nano"
 	@cat ${DOTFILES}/.nanorc > ${HOME}/.nanorc
 	@echo "include \"${DOTFILES}/vendor/nano-syntax-highlighting/*.nanorc\"" >> ${HOME}/.nanorc
 
@@ -139,7 +145,7 @@ nano-clean:
 	@rm -f ${HOME}/.nanorc
 
 nano-test:
-	@test ! -f ${HOME}/.nanorc && echo "[ ] Nano rc not found" || echo "[x] Nano rc found"
+	@test ! -f ${HOME}/.nanorc && echo "[ ] nanorc not found" || echo "[x] nanorc"
 
 # Console colors for gnome-terminal: https://github.com/Gogh-Co/Gogh
 gogh:
@@ -150,11 +156,10 @@ gogh:
 	bash $(DOTFILES)/vendor/gogh/installs/dracula.sh
 
 inputrc: inputrc-clean
-	@echo "inputrc"
 	@ln -fs $(DOTFILES)/.inputrc ${HOME}/.inputrc
 
 inputrc-clean:
 	@rm -f ${HOME}/.inputrc
 
 inputrc-test:
-	@test ! -f ${HOME}/.inputrc && echo "[ ] inputrc not found" || echo "[x] inputrc found"
+	@test ! -f ${HOME}/.inputrc && echo "[ ] inputrc not found" || echo "[x] inputrc"
