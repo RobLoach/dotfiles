@@ -154,9 +154,9 @@ $if Bash
     "\ep": "\C-e | less"
 
     # Auto-pairs -- let's try if this is more convenient than annoying...
-    "\"": "\C-v\"\C-v\"\C-b"
-    "\'": "\C-v\'\C-v\'\C-b"
-    "(": "\C-v()\C-b"
+    #"\"": "\C-v\"\C-v\"\C-b"
+    #"\'": "\C-v\'\C-v\'\C-b"
+    #"(": "\C-v()\C-b"
     # Surround current line with $()
     "\ei$": "\C-a$\C-v(\C-e)"
 $endif
