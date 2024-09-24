@@ -49,6 +49,7 @@ asdf: bash submodules
 	-@asdf plugin add emsdk
 	-@asdf plugin add golang
 	-@asdf plugin add c3 https://github.com/RobLoach/asdf-c3.git
+	-@asdf plugin add zig
 
 asdf-test:
 	@asdf version >/dev/null 2>&1 && echo "[x] asdf installed correctly" || echo "[ ] asdf not found"
@@ -60,7 +61,8 @@ deps: asdf
 	@echo "Installing Dependencies"
 	@asdf install
 	@asdf global nodejs latest
-	@asdf global golang latest
+	echo "asdf global golang latest"
+	echo "asdf global zig latest"
 	echo "asdf global c3 latest"
 	echo "asdf global php latest"
 
