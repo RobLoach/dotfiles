@@ -1,47 +1,47 @@
 [submodule "asdf"]
-	path = vendor/asdf
+	path = dependencies/asdf
 	url = https://github.com/asdf-vm/asdf.git
 	ignore = dirty
 	branch = master
 
 [submodule "oh-my-bash"]
-	path = vendor/oh-my-bash
+	path = dependencies/oh-my-bash
 	url = https://github.com/ohmybash/oh-my-bash.git
 	branch = master
 	ignore = dirty
 
 [submodule "git/gitalias"]
-	path = vendor/gitalias
+	path = dependencies/gitalias
 	url = https://github.com/GitAlias/gitalias.git
 	branch = main
 	ignore = dirty
 
 [submodule "vendor/vimrc"]
-	path = vendor/vimrc
+	path = dependencies/vimrc
 	url = https://github.com/amix/vimrc.git
 	branch = master
 	ignore = dirty
 
 [submodule "vendor/nano-syntax-highlighting"]
-	path = vendor/nano-syntax-highlighting
+	path = dependencies/nano-syntax-highlighting
 	url = https://github.com/galenguyer/nano-syntax-highlighting.git
 	branch = master
 	ignore = dirty
 
 [submodule "vendor/gogh"]
-	path = vendor/gogh
+	path = dependencies/gogh
 	url = https://github.com/Gogh-Co/Gogh.git
 	branch = master
 	ignore = dirty
 
 [submodule "vendor/bash-completion"]
-	path = vendor/bash-completion
+	path = dependencies/bash-completion
 	url = https://github.com/scop/bash-completion.git
 	branch = main
 	ignore = dirty
 
 [submodule "vendor/base16-vim"]
-	path = vendor/base16-vim
+	path = dependencies/base16-vim
 	url = https://github.com/tinted-theming/base16-vim.git
 	branch = main
 	ignore = dirty
