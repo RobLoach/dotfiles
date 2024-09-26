@@ -22,9 +22,6 @@ set fill 80
 # Use a tab size of number columns. The default value is 8.
 set tabsize 4
 
-# Allow nano to be suspended with Ctrl+z
-set suspendable
-
 # Enable mouse support
 set mouse
 
