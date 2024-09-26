@@ -43,16 +43,14 @@ pull:
 restart:
 	@exec bash
 
-vendor/asdf/bin/asdf:
+submodules:
 	@git submodule update --init --recursive
-
-submodules: vendor/asdf/bin/asdf
 
 submodules-clean:
 	@git submodule deinit -f .
 
 submodules-test:
-	@test -f vendor/asdf/bin/asdf && echo "[x] Submodules" || echo "[ ] Submodules not found"
+	@test -f dependencies/asdf/bin/asdf && echo "[x] Submodules" || echo "[ ] Submodules not found"
 
 update:
 	@echo "Updating Dependencies"
@@ -124,12 +122,12 @@ bash-test:
 	@test ! -f ${HOME}/.bashrc && echo "[ ] Bash config not found" || echo "[x] Bash config"
 
 vim: vim-clean submodules
-	@echo "set runtimepath+=${DOTFILES}/vendor/vimrc" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/vendor/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/vendor/base16-vim/colors/base16-dracula.vim" >> ${HOME}/.vimrc
+	@echo "set runtimepath+=${DOTFILES}/dependencies/vimrc" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/dependencies/base16-vim/colors/base16-dracula.vim" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/.vimrc-extras.vim" >> ${HOME}/.vimrc
 
 vim-clean:
@@ -140,7 +138,7 @@ vim-test:
 
 nano: nano-clean submodules
 	@cat ${DOTFILES}/.nanorc > ${HOME}/.nanorc
-	@echo "include \"${DOTFILES}/vendor/nano-syntax-highlighting/*.nanorc\"" >> ${HOME}/.nanorc
+	@echo "include \"${DOTFILES}/dependencies/nano-syntax-highlighting/*.nanorc\"" >> ${HOME}/.nanorc
 
 nano-clean:
 	@rm -f ${HOME}/.nanorc
@@ -150,11 +148,11 @@ nano-test:
 
 # Console colors for gnome-terminal: https://github.com/Gogh-Co/Gogh
 gogh:
-	GOGH_APPLY_SCRIPT=$(DOTFILES)/vendor/gogh/apply-colors.sh \
-	GOGH_ALACRITTY_SCRIPT=$(DOTFILES)/vendor/gogh/apply-alacritty.py \
-	GOGH_TERMINATOR_SCRIPT=$(DOTFILES)/vendor/gogh/apply-terminator.py \
+	GOGH_APPLY_SCRIPT=$(DOTFILES)/dependencies/gogh/apply-colors.sh \
+	GOGH_ALACRITTY_SCRIPT=$(DOTFILES)/dependencies/gogh/apply-alacritty.py \
+	GOGH_TERMINATOR_SCRIPT=$(DOTFILES)/dependencies/gogh/apply-terminator.py \
 	TERMINAL=gnome-terminal \
-	bash $(DOTFILES)/vendor/gogh/installs/dracula.sh
+	bash $(DOTFILES)/dependencies/gogh/installs/dracula.sh
 
 inputrc: inputrc-clean
 	@ln -fs $(DOTFILES)/.inputrc ${HOME}/.inputrc

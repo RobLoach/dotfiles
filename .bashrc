@@ -6,13 +6,13 @@ esac
 
 # Set the asdf directory
 export DOTFILES="$HOME/.dotfiles"
-export ASDF_DIR="$DOTFILES/vendor/asdf"
+export ASDF_DIR="$DOTFILES/dependencies/asdf"
 export ASDF_DATA_DIR="$DOTFILES/.asdf_data"
 export ASDF_CONFIG_FILE="$DOTFILES/.asdf_data/.asdfrc"
-export BASH_COMPLETION_DIR="$DOTFILES/vendor/bash-completion"
+export BASH_COMPLETION_DIR="$DOTFILES/dependencies/bash-completion"
 
 # Path to your oh-my-bash installation.
-export OSH="$DOTFILES/vendor/oh-my-bash"
+export OSH="$DOTFILES/dependencies/oh-my-bash"
 export AG_NO_CONTEXT=false
 
 # Set name of the theme to load. Optionally, if you set this to "random"
