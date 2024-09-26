@@ -56,6 +56,7 @@ submodules-test:
 
 update:
 	@echo "Updating Dependencies"
+	@git pull origin master
 	@git submodule update --init --remote --recursive
 	@git status
 
