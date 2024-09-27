@@ -80,6 +80,7 @@ deps: asdf
 	@echo "asdf global zig 0.13.0"
 	@echo "asdf global c3 0.6.2"
 	@echo "asdf global php 8.3.9"
+	-@composer install
 
 # ssh
 ssh: ssh-clean

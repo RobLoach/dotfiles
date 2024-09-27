@@ -1,0 +1,13 @@
+{
+    "require": {
+        "consolidation/cgr": "*"
+    },
+	"scripts": {
+		"post-install-cmd": [
+			"cgr drush/drush pantheon-systems/terminus"
+		],
+		"post-update-cmd": [
+			"cgr update"
+		]
+	}
+}

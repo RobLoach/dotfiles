@@ -12,6 +12,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 - [bash-completion](https://github.com/scop/bash-completion) for a set of completions for shell applications
 - [Dracula Theme](https://draculatheme.com/) wherever possible
 - [gitalias](https://github.com/GitAlias/gitalias) commands for easier version control
+- [Composer](https://getcomposer.org) applications installed via [cgr](https://github.com/consolidation/cgr)
 - Cleanly managed through symlinks and `make`
 - Absolutely no guarantees that things work or won't break your system :astronaut:
 
