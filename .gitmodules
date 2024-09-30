@@ -45,3 +45,9 @@
 	url = https://github.com/tinted-theming/base16-vim.git
 	branch = main
 	ignore = dirty
+
+[submodule "dependencies/tinted-shell"]
+	path = dependencies/tinted-shell
+	url = https://github.com/tinted-theming/tinted-shell.git
+	branch = main
+	ignore = dirty
