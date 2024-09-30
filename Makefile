@@ -65,6 +65,7 @@ asdf: bash submodules
 	-@asdf plugin add golang
 	-@asdf plugin add c3 https://github.com/RobLoach/asdf-c3.git
 	-@asdf plugin add zig
+	-@asdf plugin add rust
 
 asdf-test:
 	@asdf version >/dev/null 2>&1 && echo "[x] asdf installed correctly" || echo "[ ] asdf not found"
@@ -80,8 +81,10 @@ deps: asdf
 	@echo "asdf global zig 0.13.0"
 	@echo "asdf global c3 0.6.2"
 	@echo "asdf global php 8.3.9"
+	@echo "asdf global rust latest"
 	-@composer install
 	-@npm install
+	-@asdf reshim
 
 deps-test:
 	@test ! -f $(DOTFILES)/node_modules/.bin/tldr && echo "[ ] Node.js dependencies - Run 'make deps'" || echo "[x] Node.js dependencies"
@@ -90,6 +93,16 @@ deps-test:
 deps-clean:
 	@rm -rf $(DOTFILES)/node_modules package-lock.json
 	@rm -rf $(DOTFILES)/vendor copmoser.lock
+
+rust:
+	@cargo install vivid
+	-@asdf reshim
+
+rust-test:
+	@vivid --version >> /dev/null 2>&1 && echo "[x] Rust dependencies" || echo "[ ] Rust dependencies"
+
+rust-clean:
+	@cargo uninstall vivid
 
 # ssh
 ssh: ssh-clean

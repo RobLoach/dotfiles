@@ -25,6 +25,7 @@ alias mdkir='mkdir'
 # composer
 alias comopser='composer'
 alias copmoser='composer'
+alias ocmnposer='composer'
 alias instlal='install'
 
 # dotfiles

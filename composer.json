@@ -8,7 +8,8 @@
     },
 	"scripts": {
 		"post-install-cmd": [
-			"cgr drush/drush pantheon-systems/terminus"
+			"cgr drush/drush",
+			"cgr pantheon-systems/terminus"
 		],
 		"post-update-cmd": [
 			"cgr update"
