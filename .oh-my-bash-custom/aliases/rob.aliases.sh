@@ -10,6 +10,7 @@ alias oirgin='origin'
 
 # Text editor
 alias pluma='xed'
+alias nanoa='nano'
 alias 'code.'='code .'
 if command -v vim &> /dev/null; then
     alias vi='vim'
