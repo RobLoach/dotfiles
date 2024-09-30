@@ -67,4 +67,4 @@
 	st = status -sb
 
 [include]
-	path = ~/.dotfiles/vendor/gitalias/gitalias.txt
+	path = ~/.dotfiles/dependencies/gitalias/gitalias.txt

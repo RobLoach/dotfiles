@@ -84,11 +84,12 @@ set quickblank
 
 # Keybindings
 bind ^Q   exit          all
+bind ^X   exit          all
 bind ^Z   suspend       main
 bind M-R  redo          main
 bind ^C   copy          main
 bind ^V   paste         main
-bind ^X   cut           main
+#bind ^X   cut           main
 bind ^K   zap           main
 bind ^H   chopwordleft  all
 bind M-/  comment       main
