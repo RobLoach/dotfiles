@@ -1,0 +1,11 @@
+{
+  "name": "@robloach/dotfiles",
+  "description": "RobLoach's Dotfiles",
+  "homepage": "https://github.com/robloach/dotfiles",
+  "private": true,
+  "dependencies": {
+    "tldr": "*"
+  },
+  "repository": "github:RobLoach/dotfiles",
+  "license": "Zlib"
+}

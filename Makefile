@@ -3,14 +3,14 @@ DOTFILES := $(shell pwd)
 # Install all the dotfiles
 install: welcome install-start submodules bash git gnome ssh vim nano inputrc test
 	@echo ""
-	@echo "Installation complete. Run 'make deps' to install dependencies."
+	@echo "Dotfiles installed. Run 'make deps' for optional dependencies."
 	@echo ""
 
 # Remove any of the dotfiles from the system
-clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean
+clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean deps-clean
 
 # Test to make sure the dotfiles were set up correctly
-test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test
+test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test deps-test
 
 welcome:
 	@echo "Welcome to RobLoach/dotfiles!"
@@ -81,6 +81,15 @@ deps: asdf
 	@echo "asdf global c3 0.6.2"
 	@echo "asdf global php 8.3.9"
 	-@composer install
+	-@npm install
+
+deps-test:
+	@test ! -f $(DOTFILES)/node_modules/.bin/tldr && echo "[ ] Node.js dependencies - Run 'make deps'" || echo "[x] Node.js dependencies"
+	@test ! -f $(DOTFILES)/vendor/bin/cgr && echo "[ ] Composer dependencies - Run 'make deps'" || echo "[x] Composer dependencies"
+
+deps-clean:
+	@rm -rf $(DOTFILES)/node_modules package-lock.json
+	@rm -rf $(DOTFILES)/vendor copmoser.lock
 
 # ssh
 ssh: ssh-clean

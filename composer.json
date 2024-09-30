@@ -1,6 +1,10 @@
 {
+	"name": "robloach/dotfiles",
+	"description": "RobLoach's Dotfiles",
+	"homepage": "https://github.com/robloach/dotfiles",
+	"license": "Zlib",
     "require": {
-        "consolidation/cgr": "*"
+        "consolidation/cgr": "^2.0.6"
     },
 	"scripts": {
 		"post-install-cmd": [
