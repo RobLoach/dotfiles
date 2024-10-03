@@ -1,16 +1,16 @@
 DOTFILES := $(shell pwd)
 
 # Install all the dotfiles
-install: welcome install-start submodules bash git gnome ssh vim nano inputrc test
+install: welcome install-start submodules bash git gnome ssh vim nano inputrc tmux test
 	@echo ""
 	@echo "Dotfiles installed. Run 'make deps' for optional dependencies."
 	@echo ""
 
 # Remove any of the dotfiles from the system
-clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean deps-clean
+clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean tmux-clean deps-clean
 
 # Test to make sure the dotfiles were set up correctly
-test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test deps-test
+test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test tmux-test deps-test
 
 welcome:
 	@echo "Welcome to RobLoach/dotfiles!"
@@ -73,6 +73,7 @@ asdf-clean:
 	@rm -rf ${HOME}/.tool-versions
 
 tmux: submodules
+	@echo "# RobLoach tmux config https://github.com/robloach/dotfiles" > ${HOME}/.tmux.conf
 	@echo "tmux_dir=\"${DOTFILES}/tmux\"" >> ${HOME}/.tmux.conf
 	@echo "source \"${DOTFILES}/tmux/tmux.conf\"" >> ${HOME}/.tmux.conf
 
@@ -142,7 +143,7 @@ bash-test:
 	@test ! -f ${HOME}/.bashrc && echo "[ ] Bash config not found" || echo "[x] Bash config"
 
 vim: vim-clean submodules
-	@echo "set runtimepath+=${DOTFILES}/dependencies/vimrc" >> ${HOME}/.vimrc
+	@echo "set runtimepath+=${DOTFILES}/dependencies/vimrc" > ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc

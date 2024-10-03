@@ -52,3 +52,12 @@
 [submodule "tmux/plugins/tinted-tmux"]
 	path = tmux/plugins/tinted-tmux
 	url = https://github.com/tinted-theming/tinted-tmux.git
+[submodule "tmux/plugins/tmux-prefixless"]
+	path = tmux/plugins/tmux-prefixless
+	url = https://github.com/toddyamakawa/tmux-prefixless.git
+[submodule "tmux/plugins/tmux-sensible"]
+	path = tmux/plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible.git
+[submodule "tmux/plugins/minimal-tmux-status"]
+	path = tmux/plugins/minimal-tmux-status
+	url = https://github.com/niksingh710/minimal-tmux-status.git
