@@ -10,7 +10,6 @@ export PATH="$PATH\
 :$DOTFILES/node_modules/.bin";
 
 # Tinted Shell
-
 if [[ -f "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh" ]]; then
 	. "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh"
 fi
