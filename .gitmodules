@@ -46,8 +46,3 @@
 	branch = main
 	ignore = dirty
 
-[submodule "dependencies/tmux/plugins/tpm"]
-	path = dependencies/tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm.git
-	branch = master
-	ignore = dirty
