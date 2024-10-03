@@ -72,6 +72,16 @@ asdf-test:
 asdf-clean:
 	@rm -rf ${HOME}/.tool-versions
 
+tmux: submodules
+	@echo "tmux_dir=\"${DOTFILES}/tmux\"" >> ${HOME}/.tmux.conf
+	@echo "source \"${DOTFILES}/tmux/tmux.conf\"" >> ${HOME}/.tmux.conf
+
+tmux-clean:
+	@rm -f ${HOME}/.tmux.conf
+
+tmux-test:
+	@test ! -f ${HOME}/.tmux.conf && echo "[ ] tmux" || echo "[x] tmux"
+
 deps: asdf
 	@echo "Installing Dependencies"
 	@asdf install

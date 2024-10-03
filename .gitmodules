@@ -46,3 +46,9 @@
 	branch = main
 	ignore = dirty
 
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "tmux/plugins/tinted-tmux"]
+	path = tmux/plugins/tinted-tmux
+	url = https://github.com/tinted-theming/tinted-tmux.git
