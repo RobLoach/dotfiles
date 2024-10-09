@@ -3,12 +3,12 @@ Host *.drush.in
     PubkeyAcceptedKeyTypes +ssh-rsa
 
 Host *.acquia.com
-    IdentityFile ~/.ssh/New/id_rsa
+    IdentityFile ~/.ssh/acquia
     #IdentitiesOnly yes # see NOTES below
     #AddKeysToAgent yes
 
 Host *.acquia-sites.com
-    IdentityFile ~/.ssh/New/id_rsa
+    IdentityFile ~/.ssh/acquia
     #IdentitiesOnly yes # see NOTES below
     #AddKeysToAgent yes
 
