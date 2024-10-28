@@ -17,7 +17,7 @@ set atblanks
 set fill 80
 
 # Don’t display the two help lines at the bottom of the screen.
-#set nohelp
+set nohelp
 
 # Use a tab size of number columns. The default value is 8.
 set tabsize 4
@@ -86,7 +86,7 @@ set quickblank
 set emptyline
 
 # Enable vim-style lock-files for when editing files
-set locking
+#set locking
 
 # Keybindings
 bind ^Q   exit          all
@@ -105,8 +105,8 @@ bind M-C  location      main
 bind ^E   wherewas      all
 bind M-E  findprevious  all
 bind ^R   replace       main
-bind ^_   gotoline      main
-bind ^G   firstline     all
+bind ^G   gotoline      main
+#bind ^G   firstline     all
 bind M-G  lastline      all
 bind ^B   pageup        all
 #bind ^F   pagedown      all
@@ -115,6 +115,10 @@ bind ^F   whereis main
 bind F1 exit main
 bind F2 savefile main
 bind F3 findnext main
+bind F3 findprevious main
+
+#bind ^[ unindent main # Cannot be rebound
+bind ^/ comment main
 
 bind ^z undo main
 
