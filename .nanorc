@@ -85,6 +85,9 @@ set quickblank
 # Do not use the line below the title bar, leaving it entirely blank.
 set emptyline
 
+# Enable vim-style lock-files for when editing files
+set locking
+
 # Keybindings
 bind ^Q   exit          all
 bind ^X   exit          all
@@ -112,6 +115,8 @@ bind ^F   whereis main
 bind F1 exit main
 bind F2 savefile main
 bind F3 findnext main
+
+bind ^z undo main
 
 #bind M-1    help         all   # fix ^G been used
 bind Sh-M-C constantshow main  # fix M-C been used
