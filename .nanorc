@@ -17,7 +17,7 @@ set atblanks
 set fill 80
 
 # Don’t display the two help lines at the bottom of the screen.
-#set nohelp
+set nohelp
 
 # Use a tab size of number columns. The default value is 8.
 set tabsize 4
