@@ -132,13 +132,13 @@ bash-test:
 	@test ! -f ${HOME}/.bashrc && echo "[ ] Bash config not found" || echo "[x] Bash config"
 
 vim: vim-clean submodules
-	@echo "set runtimepath+=${DOTFILES}/dependencies/vimrc" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/tinted-vim/colors/base24-dracula.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/.vimrc-extras.vim" >> ${HOME}/.vimrc
+	@echo "set runtimepath+=${DOTFILES}/dependencies/vimrc" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/basic.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/filetypes.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/plugins_config.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/extended.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/.vimrc-extras.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/tinted-vim/colors/base16-dracula.vim" >> "${HOME}/.vimrc"
 
 vim-clean:
 	@rm -f ${HOME}/.vimrc
