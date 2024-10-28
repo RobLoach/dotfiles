@@ -50,7 +50,7 @@ set keycolor lightblack
 set functioncolor lightblack
 
 # Specify the color combination to use for selected text
-#set selectedcolor white,black
+set selectedcolor white,lightblack
 
 # Make the Home key smarter
 set smarthome
@@ -85,13 +85,16 @@ set quickblank
 # Do not use the line below the title bar, leaving it entirely blank.
 set emptyline
 
+# Set the two characters used to indicate the presence of tabs and spaces.
+#set whitespace "  "
+
 # Enable vim-style lock-files for when editing files
 #set locking
 
 # Keybindings
 bind ^Q   exit          all
 bind ^X   exit          all
-bind ^Z   suspend       main
+#bind ^Z   suspend       main
 bind M-R  redo          main
 bind ^C   copy          main
 bind ^V   paste         main
