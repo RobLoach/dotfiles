@@ -102,12 +102,12 @@ bind M-/  comment       main
 bind ^Space complete    main
 
 bind M-C  location      main
-bind ^E   wherewas      all
-bind M-E  findprevious  all
+bind ^E   wherewas      main
+bind M-E  findprevious  main
 bind ^R   replace       main
 bind ^G   gotoline      main
 #bind ^G   firstline     all
-bind M-G  lastline      all
+bind M-G  lastline      main
 bind ^B   pageup        all
 #bind ^F   pagedown      all
 
