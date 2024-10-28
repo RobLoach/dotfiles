@@ -17,7 +17,7 @@ set atblanks
 set fill 80
 
 # Don’t display the two help lines at the bottom of the screen.
-set nohelp
+#set nohelp
 
 # Use a tab size of number columns. The default value is 8.
 set tabsize 4
@@ -41,13 +41,13 @@ set unix
 set errorcolor bold,red
 
 # Specify the color combination to use for line numbers
-set numbercolor black
+set numbercolor lightblack
 
 # Specify the color combination to use for the shortcut key combos in the two help lines at the bottom of the screen.
-set keycolor black
+set keycolor lightblack
 
 # Use this color combination for the concise function descriptions in the two help lines at the bottom of the screen.
-set functioncolor black
+set functioncolor lightblack
 
 # Specify the color combination to use for selected text
 #set selectedcolor white,black

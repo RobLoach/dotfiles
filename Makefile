@@ -137,7 +137,7 @@ vim: vim-clean submodules
 	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/base16-vim/colors/base16-dracula.vim" >> ${HOME}/.vimrc
+	@echo "source ${DOTFILES}/dependencies/tinted-vim/colors/base24-dracula.vim" >> ${HOME}/.vimrc
 	@echo "source ${DOTFILES}/.vimrc-extras.vim" >> ${HOME}/.vimrc
 
 vim-clean:

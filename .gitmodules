@@ -41,7 +41,7 @@
 	ignore = dirty
 
 [submodule "vendor/base16-vim"]
-	path = dependencies/base16-vim
+	path = dependencies/tinted-vim
 	url = https://github.com/tinted-theming/base16-vim.git
 	branch = main
 	ignore = dirty
