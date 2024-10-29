@@ -65,6 +65,7 @@ asdf: bash submodules
 	-@asdf plugin add golang
 	-@asdf plugin add c3 https://github.com/RobLoach/asdf-c3.git
 	-@asdf plugin add zig
+	-@asdf plugin add protonge
 
 asdf-test:
 	@asdf version >/dev/null 2>&1 && echo "[x] asdf installed correctly" || echo "[ ] asdf not found"
