@@ -95,6 +95,7 @@ deps-clean:
 	@rm -rf $(DOTFILES)/vendor copmoser.lock
 
 rust:
+	@cargo install tinted-builder-rust
 	@cargo install vivid
 	-@asdf reshim
 
