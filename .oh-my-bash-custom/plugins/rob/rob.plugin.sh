@@ -9,6 +9,9 @@ export PATH="$PATH\
 :$DOTFILES/vendor/bin\
 :$DOTFILES/node_modules/.bin";
 
+# Rust/Cargo
+export CARGO_HOME="$ASDF_DATA_DIR/installs/rust/1.81.0";
+
 # Tinted Shell
 if [[ -f "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh" ]]; then
 	. "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh"
