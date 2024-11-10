@@ -17,7 +17,7 @@ set atblanks
 set fill 80
 
 # Don’t display the two help lines at the bottom of the screen.
-#set nohelp
+set nohelp
 
 # Use a tab size of number columns. The default value is 8.
 set tabsize 4
@@ -38,19 +38,19 @@ set titlecolor green
 set unix
 
 # Use this color combination for the status bar when an error message is displayed.
-set errorcolor red
+set errorcolor bold,red
 
 # Specify the color combination to use for line numbers
-set numbercolor black
+set numbercolor lightblack
 
 # Specify the color combination to use for the shortcut key combos in the two help lines at the bottom of the screen.
-set keycolor black
+set keycolor lightblack
 
 # Use this color combination for the concise function descriptions in the two help lines at the bottom of the screen.
-set functioncolor black
+set functioncolor lightblack
 
 # Specify the color combination to use for selected text
-#set selectedcolor white,black
+set selectedcolor white,lightblack
 
 # Make the Home key smarter
 set smarthome
@@ -82,10 +82,19 @@ set multibuffer
 # Make status-bar messages disappear after 1 keystroke instead of after 20.
 set quickblank
 
+# Do not use the line below the title bar, leaving it entirely blank.
+set emptyline
+
+# Set the two characters used to indicate the presence of tabs and spaces.
+#set whitespace "  "
+
+# Enable vim-style lock-files for when editing files
+#set locking
+
 # Keybindings
 bind ^Q   exit          all
 bind ^X   exit          all
-bind ^Z   suspend       main
+#bind ^Z   suspend       main
 bind M-R  redo          main
 bind ^C   copy          main
 bind ^V   paste         main
@@ -96,16 +105,27 @@ bind M-/  comment       main
 bind ^Space complete    main
 
 bind M-C  location      main
-bind ^E   wherewas      all
-bind M-E  findprevious  all
+bind ^E   wherewas      main
+bind M-E  findprevious  main
 bind ^R   replace       main
-bind ^_   gotoline      main
-bind ^G   firstline     all
-bind M-G  lastline      all
+bind ^G   gotoline      main
+#bind ^G   firstline     all
+bind M-G  lastline      main
 bind ^B   pageup        all
-bind ^F   pagedown      all
+#bind ^F   pagedown      all
 
-bind M-1    help         all   # fix ^G been used
+bind ^F   whereis main
+bind F1 exit main
+bind F2 savefile main
+bind F3 findnext main
+bind F3 findprevious main
+
+#bind ^[ unindent main # Cannot be rebound
+bind ^/ comment main
+
+bind ^z undo main
+
+#bind M-1    help         all   # fix ^G been used
 bind Sh-M-C constantshow main  # fix M-C been used
 bind Sh-M-F formatter    main  # fix M-F and M-B might be used
 bind Sh-M-B linter       main

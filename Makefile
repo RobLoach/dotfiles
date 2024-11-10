@@ -66,6 +66,7 @@ asdf: bash submodules
 	-@asdf plugin add c3 https://github.com/RobLoach/asdf-c3.git
 	-@asdf plugin add zig
 	-@asdf plugin add rust
+	-@asdf plugin add protonge
 
 asdf-test:
 	@asdf version >/dev/null 2>&1 && echo "[x] asdf installed correctly" || echo "[ ] asdf not found"
@@ -146,13 +147,13 @@ bash-test:
 	@test ! -f ${HOME}/.bashrc && echo "[ ] Bash config not found" || echo "[x] Bash config"
 
 vim: vim-clean submodules
-	@echo "set runtimepath+=${DOTFILES}/dependencies/vimrc" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/basic.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/filetypes.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/plugins_config.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/extended.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/dependencies/base16-vim/colors/base16-dracula.vim" >> ${HOME}/.vimrc
-	@echo "source ${DOTFILES}/.vimrc-extras.vim" >> ${HOME}/.vimrc
+	@echo "set runtimepath+=${DOTFILES}/dependencies/vimrc" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/basic.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/filetypes.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/plugins_config.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/vimrc/vimrcs/extended.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/.vimrc-extras.vim" >> "${HOME}/.vimrc"
+	@echo "source ${DOTFILES}/dependencies/tinted-vim/colors/base24-dracula.vim" >> "${HOME}/.vimrc"
 
 vim-clean:
 	@rm -f ${HOME}/.vimrc
