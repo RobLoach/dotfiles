@@ -9,6 +9,13 @@ export PATH="$PATH\
 :$DOTFILES/vendor/bin\
 :$DOTFILES/node_modules/.bin";
 
+# Dotenv
+if [[ -f "${HOME}/.env" ]]; then
+	set -o allexport
+	source "${HOME}/.env"
+	set +o allexport
+fi
+
 # Tinted Shell
 if [[ -f "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh" ]]; then
 	. "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh"
