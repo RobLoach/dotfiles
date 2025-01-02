@@ -36,3 +36,6 @@ alias xomposer='composer'
 alias cimposer='composer'
 alias clmposer='composer'
 alias cpmposer='composer'
+
+# Flatpaks
+alias flatpak-builder="flatpak run org.flatpak.Builder"
