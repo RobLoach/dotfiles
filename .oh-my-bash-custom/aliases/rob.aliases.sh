@@ -27,6 +27,7 @@ alias comopser='composer'
 alias copmoser='composer'
 alias compsoer='composer'
 alias copmposer='composer'
+alias compser='composer'
 
 # dotfiles
 alias dotfiles='make -C ${DOTFILES}'
