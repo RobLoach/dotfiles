@@ -28,16 +28,17 @@ alias copmoser='composer'
 alias compsoer='composer'
 alias copmposer='composer'
 alias compser='composer'
-
-# dotfiles
-alias dotfiles='make -C ${DOTFILES}'
-
-# composer
 alias composre='composer'
 alias xomposer='composer'
 alias cimposer='composer'
 alias clmposer='composer'
 alias cpmposer='composer'
+
+# dotfiles
+alias dotfiles='make -C ${DOTFILES}'
+
+# VSCode
+alias cdode='code'
 
 # Flatpaks
 alias flatpak-builder="flatpak run org.flatpak.Builder"
