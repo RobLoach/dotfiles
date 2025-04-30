@@ -25,17 +25,20 @@ alias mdkir='mkdir'
 # composer
 alias comopser='composer'
 alias copmoser='composer'
-alias instlal='install'
-
-# dotfiles
-alias dotfiles='make -C ${DOTFILES}'
-
-# composer
+alias compsoer='composer'
+alias copmposer='composer'
+alias compser='composer'
 alias composre='composer'
 alias xomposer='composer'
 alias cimposer='composer'
 alias clmposer='composer'
 alias cpmposer='composer'
+
+# dotfiles
+alias dotfiles='make -C ${DOTFILES}'
+
+# VSCode
+alias cdode='code'
 
 # Flatpaks
 alias flatpak-builder="flatpak run org.flatpak.Builder"
