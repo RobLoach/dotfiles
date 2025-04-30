@@ -39,3 +39,6 @@ alias cpmposer='composer'
 
 # Flatpaks
 alias flatpak-builder="flatpak run org.flatpak.Builder"
+
+# Node.js
+alias nodejs='node'
