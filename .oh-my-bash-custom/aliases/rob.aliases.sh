@@ -7,6 +7,7 @@ alias gi='git'
 alias giut='git'
 alias guit='git'
 alias gitp='git'
+alias giot='git'
 
 # Text editor
 alias pluma='xed'
