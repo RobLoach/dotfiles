@@ -75,12 +75,12 @@ asdf-clean:
 
 deps: asdf
 	@echo "Installing Dependencies"
-	@asdf install
-	@asdf global nodejs 22.7.0
-	@echo "asdf global golang 1.23.0"
-	@echo "asdf global zig 0.13.0"
-	@echo "asdf global c3 0.6.2"
-	@echo "asdf global php 8.3.9"
+	@asdf install nodejs latest
+	@asdf global nodejs latest
+	@echo "asdf global golang latest"
+	@echo "asdf global zig latest"
+	@echo "asdf global c3 latest"
+	@echo "asdf global php latest"
 	@echo "composer install"
 	-@npm install
 
