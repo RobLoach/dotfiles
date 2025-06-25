@@ -34,3 +34,6 @@ Thumbs.db
 *.class
 .tmp
 .idea
+
+# asdf
+.tools-versions
