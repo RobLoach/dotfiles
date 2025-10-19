@@ -1,16 +1,16 @@
 DOTFILES := $(shell pwd)
 
 # Install all the dotfiles
-install: welcome install-start submodules bash git gnome ssh vim nano inputrc config test
+install: welcome install-start submodules bash git gnome ssh vim nano inputrc test
 	@echo ""
 	@echo "Dotfiles installed. Run 'make deps' for optional dependencies."
 	@echo ""
 
 # Remove any of the dotfiles from the system
-clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean config-clearn inputrc-clean deps-clean
+clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean deps-clean
 
 # Test to make sure the dotfiles were set up correctly
-test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test config-test deps-test
+test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test deps-test
 
 welcome:
 	@echo "Welcome to RobLoach/dotfiles!"
@@ -174,11 +174,3 @@ inputrc-clean:
 inputrc-test:
 	@test ! -f ${HOME}/.inputrc && echo "[ ] inputrc not found" || echo "[x] inputrc"
 
-config: config-clean
-	@ln -fs $(DOTFILES)/dot_config/zed/settings.json ${HOME}/.config/zed/settings.json
-
-config-clean:
-	@rm -f ${HOME}/.config/zed/settings.json
-
-config-test:
-	@test ! -f ${HOME}/.config/zed/settings.json && echo "[ ] config not found" || echo "[x] config"
