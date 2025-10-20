@@ -4,14 +4,8 @@
 	"homepage": "https://github.com/robloach/dotfiles",
 	"license": "Zlib",
     "require": {
-        "consolidation/cgr": "^2.0.6"
+        "pantheon-systems/terminus": "*"
     },
 	"scripts": {
-		"post-install-cmd": [
-			"cgr drush/drush pantheon-systems/terminus"
-		],
-		"post-update-cmd": [
-			"cgr update"
-		]
 	}
 }
