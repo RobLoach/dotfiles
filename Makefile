@@ -86,7 +86,7 @@ deps: asdf
 
 deps-test:
 	@test ! -f $(DOTFILES)/node_modules/.bin/tldr && echo "[ ] Node.js dependencies - Run 'make deps'" || echo "[x] Node.js dependencies"
-	@test ! -f $(DOTFILES)/vendor/bin/cgr && echo "[ ] Composer dependencies - Run 'make deps'" || echo "[x] Composer dependencies"
+	@test ! -f $(DOTFILES)/vendor/bin/terminus && echo "[ ] Composer dependencies - Run 'make deps'" || echo "[x] Composer dependencies"
 
 deps-clean:
 	@rm -rf $(DOTFILES)/node_modules package-lock.json
