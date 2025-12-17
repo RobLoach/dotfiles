@@ -7,6 +7,7 @@ export PATH="$PATH\
 :$HOME/Documents/RetroArch\
 :$HOME/.cargo/bin\
 :$DOTFILES/vendor/bin\
+:$HOME/.config/composer/vendor/bin\
 :$DOTFILES/node_modules/.bin";
 
 # Dotenv
