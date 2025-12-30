@@ -68,8 +68,15 @@
 
 [include]
 	path = ~/.dotfiles/dependencies/gitalias/gitalias.txt
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+# Limit memory usage when checking out repositories.
+[pack]
+	windowMemory = 100m
+	packSizeLimit = 100m
+	threads = 1
