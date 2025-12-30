@@ -37,3 +37,6 @@ Thumbs.db
 
 # asdf
 .tools-versions
+
+# Dreamhost
+.dh-diag
