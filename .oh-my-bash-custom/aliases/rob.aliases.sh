@@ -41,8 +41,9 @@ alias dotfiles='make -C ${DOTFILES}'
 # VSCode
 alias cdode='code'
 
-# Flatpaks
+# Flatpak
 alias flatpak-builder="flatpak run org.flatpak.Builder"
+alias joplin="flatpak run net.cozic.joplin_desktop"
 
 # Node.js
 alias nodejs='node'
