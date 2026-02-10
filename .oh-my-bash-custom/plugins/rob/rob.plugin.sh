@@ -6,6 +6,7 @@ export PATH="$PATH\
 :$HOME/.local/bin\
 :$HOME/Documents/RetroArch\
 :$HOME/.cargo/bin\
+:$HOME/.lando/bin\
 :$DOTFILES/vendor/bin\
 :$HOME/.config/composer/vendor/bin\
 :$DOTFILES/node_modules/.bin";
