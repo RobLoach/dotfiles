@@ -7,5 +7,8 @@
         "pantheon-systems/terminus": "*"
     },
 	"scripts": {
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "*"
 	}
 }
