@@ -49,4 +49,4 @@ alias joplin="flatpak run net.cozic.joplin_desktop"
 alias nodejs='node'
 
 # DDEV
-alias dduli='ddev launch $(ddev drush uli)'
+alias dduli='ddev launch "$(ddev drush uli)"'
