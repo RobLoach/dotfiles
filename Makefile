@@ -1,16 +1,16 @@
 DOTFILES := $(shell pwd)
 
 # Install all the dotfiles
-install: welcome install-start submodules bash git gnome ssh vim nano inputrc test
+install: welcome install-start submodules bash git gnome ssh vim nano inputrc screenrc test
 	@echo ""
 	@echo "Dotfiles installed. Run 'make deps' for optional dependencies."
 	@echo ""
 
 # Remove any of the dotfiles from the system
-clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean deps-clean
+clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean screenrc-clean deps-clean
 
 # Test to make sure the dotfiles were set up correctly
-test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test deps-test
+test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test screenrc-text deps-test
 
 welcome:
 	@echo "Welcome to RobLoach/dotfiles!"
@@ -173,4 +173,13 @@ inputrc-clean:
 
 inputrc-test:
 	@test ! -f ${HOME}/.inputrc && echo "[ ] inputrc not found" || echo "[x] inputrc"
+
+screenrc: screenrc-clean
+	@ln -fs $(DOTFILES)/.screenrc ${HOME}/.screenrc
+
+screenrc-clean:
+	@rm -f ${HOME}/.screenrc
+
+screenrc-test:
+	@test ! -f ${HOME}/.screenrc && echo "[ ] screenrc not found" || echo "[x] screenrc"
 
