@@ -37,6 +37,7 @@ Thumbs.db
 .claude
 .playwright
 .playwright-cli
+.omc
 
 # asdf
 .tools-versions
