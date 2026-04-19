@@ -50,3 +50,4 @@ alias nodejs='node'
 
 # DDEV
 alias dduli='ddev launch "$(ddev drush uli)"'
+alias docker-compose docker-compose-v2.31.0
