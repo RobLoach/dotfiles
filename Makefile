@@ -10,7 +10,7 @@ install: welcome install-start submodules bash git gnome ssh vim nano inputrc sc
 clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean screenrc-clean deps-clean
 
 # Test to make sure the dotfiles were set up correctly
-test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test screenrc-text deps-test
+test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test screenrc-test deps-test
 
 welcome:
 	@echo "Welcome to RobLoach/dotfiles!"
