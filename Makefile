@@ -63,7 +63,6 @@ asdf: bash submodules
 	-@asdf plugin add php
 	-@asdf plugin add emsdk
 	-@asdf plugin add golang
-	-@asdf plugin add c3 https://github.com/RobLoach/asdf-c3.git
 	-@asdf plugin add zig
 	-@asdf plugin add protonge
 
@@ -79,7 +78,6 @@ deps: asdf
 	@asdf global nodejs latest
 	@echo "asdf global golang latest"
 	@echo "asdf global zig latest"
-	@echo "asdf global c3 latest"
 	@echo "asdf global php latest"
 	@echo "composer install"
 	-@npm install
@@ -182,4 +180,3 @@ screenrc-clean:
 
 screenrc-test:
 	@test ! -f ${HOME}/.screenrc && echo "[ ] screenrc not found" || echo "[x] screenrc"
-
