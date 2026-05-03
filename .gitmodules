@@ -51,3 +51,8 @@
 	url = https://github.com/tinted-theming/tinted-shell.git
 	branch = main
 	ignore = dirty
+[submodule "dependencies/emsdk"]
+	path = dependencies/emsdk
+	url = https://github.com/emscripten-core/emsdk.git
+	branch = main
+	ignore = dirty

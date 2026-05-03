@@ -13,6 +13,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 - [Dracula Theme](https://draculatheme.com/) wherever possible
 - [gitalias](https://github.com/GitAlias/gitalias) commands for easier version control
 - [Composer](https://getcomposer.org) applications installed via [cgr](https://github.com/consolidation/cgr)
+- [Emscripten](https://emscripten.org/)
 - Cleanly managed through symlinks and `make`
 - Absolutely no guarantees that things work or won't break your system :astronaut:
 
