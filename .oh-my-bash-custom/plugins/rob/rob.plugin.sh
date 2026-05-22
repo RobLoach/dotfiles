@@ -29,7 +29,7 @@ export DO_NOT_TRACK=1
 
 # Emscripten emsdk (Requires Python)
 export EMSDK_QUIET=1
-if [[ -f "${DOTFILES}/dependencies/emsdk/emsdk_env.sh" ]] && command -v python &>/dev/null; then
+if [[ -f "${DOTFILES}/dependencies/emsdk/emsdk_env.sh" ]] && command -v python3 &>/dev/null; then
 	source "${DOTFILES}/dependencies/emsdk/emsdk_env.sh"
 fi
 
