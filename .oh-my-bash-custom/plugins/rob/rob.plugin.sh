@@ -27,6 +27,9 @@ fi
 export DISABLE_TELEMETRY=1
 export DO_NOT_TRACK=1
 
+# Terminus
+export TERMINUS_HIDE_GIT_MODE_WARNING=1
+
 # Emscripten emsdk (Requires Python)
 export EMSDK_QUIET=1
 if [[ -f "${DOTFILES}/dependencies/emsdk/emsdk_env.sh" ]] && command -v python3 &>/dev/null; then
