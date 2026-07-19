@@ -1,16 +1,16 @@
 DOTFILES := $(shell pwd)
 
 # Install all the dotfiles
-install: welcome install-start submodules bash git gnome ssh vim nano inputrc screenrc test
+install: welcome install-start submodules bash git gnome ssh vim nano inputrc screenrc config test
 	@echo ""
 	@echo "Dotfiles installed. Run 'make deps' for optional dependencies."
 	@echo ""
 
 # Remove any of the dotfiles from the system
-clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean screenrc-clean deps-clean
+clean: submodules-clean git-clean gnome-clean ssh-clean bash-clean vim-clean nano-clean asdf-clean inputrc-clean screenrc-clean config-clean deps-clean
 
 # Test to make sure the dotfiles were set up correctly
-test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test screenrc-test deps-test
+test: submodules-test asdf-test ssh-test git-test gnome-test bash-test vim-test nano-test inputrc-test screenrc-test config-test deps-test
 
 welcome:
 	@echo "Welcome to RobLoach/dotfiles!"
@@ -88,7 +88,7 @@ deps-test:
 
 deps-clean:
 	@rm -rf $(DOTFILES)/node_modules package-lock.json
-	@rm -rf $(DOTFILES)/vendor copmoser.lock
+	@rm -rf $(DOTFILES)/vendor composer.lock
 
 # ssh
 ssh: ssh-clean
@@ -180,3 +180,23 @@ screenrc-clean:
 
 screenrc-test:
 	@test ! -f ${HOME}/.screenrc && echo "[ ] screenrc not found" || echo "[x] screenrc"
+
+# ~/.config — symlink each folder in dot_config into ${HOME}/.config
+config: config-clean
+	@mkdir -p ${HOME}/.config
+	@for dir in $(DOTFILES)/dot_config/*/; do \
+		name=$$(basename "$$dir"); \
+		ln -fs "$(DOTFILES)/dot_config/$$name" "${HOME}/.config/$$name"; \
+	done
+
+config-clean:
+	@for dir in $(DOTFILES)/dot_config/*/; do \
+		name=$$(basename "$$dir"); \
+		test -L "${HOME}/.config/$$name" && rm -f "${HOME}/.config/$$name" || true; \
+	done
+
+config-test:
+	@for dir in $(DOTFILES)/dot_config/*/; do \
+		name=$$(basename "$$dir"); \
+		test -L "${HOME}/.config/$$name" && echo "[x] config/$$name" || echo "[ ] config/$$name not linked"; \
+	done

@@ -27,6 +27,10 @@ fi
 export DISABLE_TELEMETRY=1
 export DO_NOT_TRACK=1
 
+# Gitlab: glab
+export GLAB_SEND_TELEMETRY=false
+export GLAB_SHOW_WHATS_NEW=false
+
 # Terminus
 export TERMINUS_HIDE_GIT_MODE_WARNING=1
 
