@@ -61,10 +61,21 @@ update:
 asdf: bash submodules
 	-@asdf plugin add nodejs
 	-@asdf plugin add php
-	-@asdf plugin add emsdk
+	#-@asdf plugin add emsdk
 	-@asdf plugin add golang
-	-@asdf plugin add zig
-	-@asdf plugin add protonge
+	#-@asdf plugin add zig
+	#-@asdf plugin add protonge
+	-@asdf plugin add glab
+
+asdf-install: asdf
+	asdf install nodejs latest
+	asdf global nodejs latest
+	asdf install php latest
+	asdf global php latest
+	asdf install golang latest
+	asdf global golang latest
+	asdf install glab latest
+	asdf global glab latest
 
 asdf-test:
 	@asdf version >/dev/null 2>&1 && echo "[x] asdf installed correctly" || echo "[ ] asdf not found"
