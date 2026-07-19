@@ -80,3 +80,7 @@
 	windowMemory = 100m
 	packSizeLimit = 100m
 	threads = 1
+
+# Ensure to GPG Sign releases/tags too.
+[tag]
+	gpgsign = true
