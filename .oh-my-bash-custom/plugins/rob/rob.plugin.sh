@@ -25,9 +25,9 @@ fi
 
 # Telemetry and Tracking
 export DISABLE_TELEMETRY=1
+export DISABLE_ERROR_REPORTING=1
 export DO_NOT_TRACK=1
-
-# Gitlab: glab
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
 export GLAB_SEND_TELEMETRY=false
 export GLAB_SHOW_WHATS_NEW=false
 
