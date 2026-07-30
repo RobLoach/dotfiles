@@ -24,6 +24,7 @@ if [[ -f "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh" ]]; t
 fi
 
 # Telemetry and Tracking
+export GH_TELEMETRY=false
 export DISABLE_TELEMETRY=1
 export DISABLE_ERROR_REPORTING=1
 export DO_NOT_TRACK=1
