@@ -20,6 +20,7 @@ fi
 
 # Tinted Shell
 if [[ -f "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh" ]]; then
+	#. "${DOTFILES}/dependencies/tinted-shell/scripts/base24-catppuccin-mocha.sh"
 	. "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh"
 fi
 
