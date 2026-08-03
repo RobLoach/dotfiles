@@ -23,12 +23,7 @@ if [[ -f "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh" ]]; t
 	. "${DOTFILES}/dependencies/tinted-shell/scripts/base24-dracula.sh"
 fi
 
-# Telemetry and Tracking
-export DISABLE_TELEMETRY=1
-export DO_NOT_TRACK=1
-
 # Gitlab: glab
-export GLAB_SEND_TELEMETRY=false
 export GLAB_SHOW_WHATS_NEW=false
 
 # Terminus
