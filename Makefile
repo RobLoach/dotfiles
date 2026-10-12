@@ -94,7 +94,7 @@ asdf-clean:
 # Install the latest version of each tool, then the Node.js and Composer packages
 deps: asdf
 	@echo "Installing Dependencies"
-	@for tool in $(ASDF_TOOLS); do asdf install $$tool latest && asdf set -u $$tool latest || exit 1; done
+	@for tool in $(ASDF_TOOLS); do asdf install $$tool latest && asdf global $$tool latest || exit 1; done
 	@npm install
 	@composer install
 
