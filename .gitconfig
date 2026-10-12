@@ -39,8 +39,18 @@
 [pull]
     rebase = false
 
+[push]
+	autoSetupRemote = true
+
+[fetch]
+	prune = true
+
+[merge]
+	conflictStyle = zdiff3
+
 [diff]
 	renames = copies
+	algorithm = histogram
 
 [github]
 	user = RobLoach

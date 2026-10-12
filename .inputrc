@@ -79,11 +79,9 @@ set menu-complete-display-prefix on
 "\e[1~": beginning-of-line          # Home
 "\e[H": beginning-of-line           # Home
 "\eOH": beginning-of-line           # Home
-"\0001": beginning-of-line          # Home
 "\e[4~": end-of-line                # End
 "\e[F": end-of-line                 # End
 "\eOF": end-of-line                 # End
-"\0005": end-of-line                # End
 
 # CTRL+DEL to delete from cursor to end of line
 "\e[2~": quoted-insert              # INS
@@ -92,7 +90,6 @@ set menu-complete-display-prefix on
 "\e[3;5~": shell-kill-word
 
 # Ctrl-Backspace
-"\0177": backward-kill-line
 "\C-H": shell-backward-kill-word
 
 # CTRL+arrows to move from word to word
