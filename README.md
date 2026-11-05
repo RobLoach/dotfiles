@@ -10,10 +10,11 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 - [vimrc](https://github.com/amix/vimrc/) for the ultimate vim experience
 - [Gogh](https://github.com/Gogh-Co/Gogh?tab=readme-ov-file#--gogh) for consistent terminal emulator color schemes
 - [bash-completion](https://github.com/scop/bash-completion) for a set of completions for shell applications
-- [Dracula Theme](https://draculatheme.com/) wherever possible
+- [Dracula Theme](https://draculatheme.com/) wherever possible, via [tinted-shell](https://github.com/tinted-theming/tinted-shell) and [tinted-vim](https://github.com/tinted-theming/tinted-vim)
 - [gitalias](https://github.com/GitAlias/gitalias) commands for easier version control
-- [Composer](https://getcomposer.org) applications installed via [cgr](https://github.com/consolidation/cgr)
-- [Emscripten](https://emscripten.org/)
+- [Composer](https://getcomposer.org) and [npm](https://www.npmjs.com) applications, like [Terminus](https://github.com/pantheon-systems/terminus) and [tldr](https://github.com/tldr-pages/tldr-node-client)
+- [Emscripten](https://emscripten.org/), loaded once it has been activated with `dependencies/emsdk/emsdk activate latest`
+- Configuration for git, ssh, nano, readline, screen and [Zed](https://zed.dev)
 - Cleanly managed through symlinks and `make`
 - Absolutely no guarantees that things work or won't break your system :astronaut:
 
@@ -25,7 +26,7 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
 
 ## Installation
 
-1. Clone the repository into `~/.dotfiles`:
+1. Clone the repository, usually into `~/.dotfiles`:
   ``` bash
   git clone --recursive https://github.com/RobLoach/dotfiles.git ~/.dotfiles
   ```
@@ -34,6 +35,37 @@ Everyone loves [Dotfiles](http://dotfiles.github.io). These are mine, but feel f
   ``` bash
   make -C ~/.dotfiles
   ```
+
+3. Optionally, install Node.js, PHP, Go and glab with asdf, along with the npm and Composer applications:
+  ``` bash
+  make deps -C ~/.dotfiles
+  ```
+
+4. Optionally, apply the Dracula color scheme to gnome-terminal:
+  ``` bash
+  make gogh -C ~/.dotfiles
+  ```
+
+## What gets installed
+
+| File | Installed as |
+| --- | --- |
+| `.bashrc`, `.bash_profile` | Symlinked into `~` |
+| `.gitconfig` | Included from a generated `~/.gitconfig`, along with gitalias and `.gitconfig.core.excludesfile` |
+| `.sshconfig` | Symlinked to `~/.ssh/config` |
+| `.vimrc-extras.vim` | Sourced from a generated `~/.vimrc`, after amix/vimrc |
+| `.nanorc` | Copied into a generated `~/.nanorc`, with nano-syntax-highlighting |
+| `.inputrc`, `.screenrc`, `.face` | Symlinked into `~` |
+| `dot_config/*` | Each folder symlinked into `~/.config` |
+
+Anything already in the way is backed up with a `.bak` suffix.
+
+## Things to know
+
+- `~/.env`, if it exists, is sourced and its variables exported to every shell.
+- `.gitconfig` sets Rob's name and GPG key, and signs every commit and tag. Change the `[user]` section, or turn off `commit.gpgsign` and `tag.gpgsign`, before using it yourself.
+- The `gl` alias runs [glab](https://gitlab.com/gitlab-org/cli), replacing oh-my-bash's `git pull` alias.
+- asdf is pinned to 0.15, the last bash release, so `make update` leaves it alone.
 
 ## Uninstall
 
@@ -55,6 +87,8 @@ Update all dependencies with...
 ```
 make update -C ~/.dotfiles
 ```
+
+After pulling changes that rename submodules, run `git submodule sync` to point existing checkouts at them.
 
 ## License
 
