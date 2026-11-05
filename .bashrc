@@ -4,8 +4,8 @@ case $- in
     *) return;;
 esac
 
-# Set the asdf directory
-export DOTFILES="$HOME/.dotfiles"
+# Find the dotfiles from wherever ~/.bashrc links to
+export DOTFILES="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 export ASDF_DIR="$DOTFILES/dependencies/asdf"
 export ASDF_DATA_DIR="$DOTFILES/.asdf_data"
 export ASDF_CONFIG_FILE="$DOTFILES/.asdf_data/.asdfrc"

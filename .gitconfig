@@ -5,7 +5,6 @@
 	username = RobLoach
 
 [core]
-	excludesfile = ~/.dotfiles/.gitconfig.core.excludesfile
 	autocrlf = false
 	safecrlf = false
 	ignorecase = false
@@ -75,9 +74,6 @@
 	remotes = remote -v
 	last = log -1 HEAD --stat
 	st = status -sb
-
-[include]
-	path = ~/.dotfiles/dependencies/gitalias/gitalias.txt
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f

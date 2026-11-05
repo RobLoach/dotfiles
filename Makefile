@@ -1,4 +1,4 @@
-DOTFILES := $(shell pwd)
+DOTFILES := $(CURDIR)
 
 # Tools installed by asdf with 'make deps'
 ASDF_TOOLS := nodejs php golang glab
@@ -119,15 +119,21 @@ ssh-clean:
 ssh-test:
 	@$(call test-link,${HOME}/.ssh/config,$(DOTFILES)/.sshconfig,SSH config)
 
-# git
-git:
-	@$(call link,$(DOTFILES)/.gitconfig,${HOME}/.gitconfig)
+# git: generated, as git can't resolve paths relative to a symlinked config
+git: submodules
+	@$(call unlink,${HOME}/.gitconfig)
+	@$(call backup,${HOME}/.gitconfig)
+	@printf '[include]\n\tpath = %s\n\tpath = %s\n[core]\n\texcludesfile = %s\n' \
+		"$(DOTFILES)/.gitconfig" \
+		"$(DOTFILES)/dependencies/gitalias/gitalias.txt" \
+		"$(DOTFILES)/.gitconfig.core.excludesfile" > "${HOME}/.gitconfig"
 
 git-clean:
 	@$(call unlink,${HOME}/.gitconfig)
+	@$(call ungenerate,${HOME}/.gitconfig)
 
 git-test:
-	@$(call test-link,${HOME}/.gitconfig,$(DOTFILES)/.gitconfig,Git config)
+	@$(call test-generated,${HOME}/.gitconfig,Git config)
 
 gnome:
 	@$(call link,$(DOTFILES)/.face,${HOME}/.face)

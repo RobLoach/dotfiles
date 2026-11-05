@@ -14,6 +14,6 @@ Host *.acquia-sites.com
 
 # BEGIN: Platform.sh certificate configuration
 Host *.platform.sh
-  Include /home/rob/.platformsh/ssh/*.config
+  Include ~/.platformsh/ssh/*.config
 Host *
 # END: Platform.sh certificate configuration
