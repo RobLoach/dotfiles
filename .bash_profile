@@ -1,7 +1,9 @@
 # Login shells read this file instead of ~/.profile, so hand off to it.
-# On Debian/Ubuntu, ~/.profile sources ~/.bashrc.
 if [[ -f ~/.profile ]]; then
 	. ~/.profile
-elif [[ -f ~/.bashrc ]]; then
+fi
+
+# Load ~/.bashrc too, unless ~/.profile already does (as on Debian/Ubuntu)
+if [[ -f ~/.bashrc ]] && ! grep -qs '\.bashrc' ~/.profile; then
 	. ~/.bashrc
 fi
