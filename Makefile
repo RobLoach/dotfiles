@@ -75,10 +75,11 @@ submodules-clean:
 submodules-test:
 	@test -f dependencies/asdf/bin/asdf && echo "[x] Submodules" || { echo "[ ] Submodules not found"; exit 1; }
 
+# asdf is pinned to 0.15, the last bash release; its master is the Go rewrite
 update:
 	@echo "Updating Dependencies"
 	@git pull origin master
-	@git submodule update --init --remote --recursive
+	@git -c submodule.asdf.update=none submodule update --init --remote --recursive
 	@git status
 
 asdf: bash submodules
