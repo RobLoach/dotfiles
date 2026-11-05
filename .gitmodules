@@ -1,47 +1,47 @@
-[submodule "asdf"]
+[submodule "dependencies/asdf"]
 	path = dependencies/asdf
 	url = https://github.com/asdf-vm/asdf.git
 	ignore = dirty
 
-[submodule "oh-my-bash"]
+[submodule "dependencies/oh-my-bash"]
 	path = dependencies/oh-my-bash
 	url = https://github.com/ohmybash/oh-my-bash.git
 	branch = master
 	ignore = dirty
 
-[submodule "git/gitalias"]
+[submodule "dependencies/gitalias"]
 	path = dependencies/gitalias
 	url = https://github.com/GitAlias/gitalias.git
 	branch = main
 	ignore = dirty
 
-[submodule "vendor/vimrc"]
+[submodule "dependencies/vimrc"]
 	path = dependencies/vimrc
 	url = https://github.com/amix/vimrc.git
 	branch = master
 	ignore = dirty
 
-[submodule "vendor/nano-syntax-highlighting"]
+[submodule "dependencies/nano-syntax-highlighting"]
 	path = dependencies/nano-syntax-highlighting
 	url = https://github.com/galenguyer/nano-syntax-highlighting.git
 	branch = master
 	ignore = dirty
 
-[submodule "vendor/gogh"]
+[submodule "dependencies/gogh"]
 	path = dependencies/gogh
 	url = https://github.com/Gogh-Co/Gogh.git
 	branch = master
 	ignore = dirty
 
-[submodule "vendor/bash-completion"]
+[submodule "dependencies/bash-completion"]
 	path = dependencies/bash-completion
 	url = https://github.com/scop/bash-completion.git
 	branch = main
 	ignore = dirty
 
-[submodule "vendor/base16-vim"]
+[submodule "dependencies/tinted-vim"]
 	path = dependencies/tinted-vim
-	url = https://github.com/tinted-theming/base16-vim.git
+	url = https://github.com/tinted-theming/tinted-vim.git
 	branch = main
 	ignore = dirty
 
@@ -50,6 +50,7 @@
 	url = https://github.com/tinted-theming/tinted-shell.git
 	branch = main
 	ignore = dirty
+
 [submodule "dependencies/emsdk"]
 	path = dependencies/emsdk
 	url = https://github.com/emscripten-core/emsdk.git

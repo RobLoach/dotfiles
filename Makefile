@@ -79,7 +79,7 @@ submodules-test:
 update:
 	@echo "Updating Dependencies"
 	@git pull origin master
-	@git -c submodule.asdf.update=none submodule update --init --remote --recursive
+	@git -c submodule.dependencies/asdf.update=none submodule update --init --remote --recursive
 	@git status
 
 asdf: bash submodules
